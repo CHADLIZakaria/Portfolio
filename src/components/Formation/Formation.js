@@ -5,7 +5,7 @@ import fsts from '../../images/fsts.png'
 
 const Formation = () => {
     return (
-        <section class="testimonials" id="testimonials-section">
+        <section class="testimonials" id="formation">
         <h2 class="main-title">Formation</h2>
         <div class="container">
             <div class="box">

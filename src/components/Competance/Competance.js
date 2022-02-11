@@ -1,28 +1,42 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Competance.scss'
-import html5 from '../../images/html5.png'
-import css3 from '../../images/css3.png'
-import js from '../../images/js.png'
-import bootstrap from '../../images/bootstrap.png'
-import flutter from '../../images/flutter.png'
+import { competances } from '../../data'
 
-import java from '../../images/java.png'
-import python from '../../images/python.png'
-import php from '../../images/php.png'
 
-import mysql from '../../images/mysql.png'
-import sqlServer from '../../images/sql-server.png'
-import postgresql from '../../images/postgresql.png'
 
 const Competance = () => {
+    useEffect(() => {
+        competances.map(element => console.log(element))
+    }, [])
+    
     return (
-        <section class="features" id="features-section">
-            <h2 class="main-title">Compétences</h2>
-            <div class="container">
-                <div class="box quality">
+        <section className="features" id="competance">
+            <h2 className="main-title">Compétences</h2>
+            <div className="container">
+                {
+                    competances.map(competance => 
+                        <div className={`box ${competance.domaine.className}`}>
+                            <div className='img-holder'>
+                                <h2>{competance.domaine.name}</h2>
+                                <img src={competance.domaine.image} />
+                            </div>
+                            <ul>
+                                {competance.values.map(
+                                    element => 
+                                    <li>
+                                        <img src={element.image} />
+                                        {element.title}
+                                    </li>
+                                )}
+                            </ul>
+                        </div>
+                    )
+                }
+
+                {/* <div class="box quality">
                     <div class="img-holder">
                         <h2>Front end</h2>
-                        <img src="images/gestion_etat_command.png" alt="" />
+                        <img src={frontEnd} alt="" />
                     </div>
                         <ul>
                             <li><img src={html5} />HTML5</li>
@@ -35,7 +49,7 @@ const Competance = () => {
                 <div class="box time">
                     <div class="img-holder">
                         <h2>Back End</h2>
-                        <img src="images/backend-background.jpg" alt="" />
+                        <img src={backEnd} alt="" />
                     </div>
                     <ul>
                         <li><img src={java} />Java</li>
@@ -46,14 +60,14 @@ const Competance = () => {
                 <div class="box passion">
                     <div class="img-holder">
                         <h2>Database</h2>
-                        <img src="images/database.jpeg" alt="" />
+                        <img src={databaseBackground} alt="" />
                     </div>
                         <ul>
                             <li><img src={mysql}/>MySQL</li>
                             <li><img src={postgresql}/>PostgreSQL</li>
                             <li><img src={sqlServer}/>Sql Server</li>
                         </ul>   
-                </div>
+                </div> */}
             </div>
         </section>
     )

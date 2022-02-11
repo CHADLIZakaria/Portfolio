@@ -13,8 +13,10 @@ function App() {
       <Navbar />
       <AboutMe />
       <Project />
+      <div className='spikes'></div>
       <Competance />
       <Formation />
+      <div className='spikes'></div>
       <ContactMe />
     </>
   );

@@ -2,7 +2,7 @@ import React from 'react'
 import './AboutMe.scss' 
 const AboutMe = () => {
   return (
-      <section className="landing" id="landing-section">
+      <section className="landing" id="aboutMe">
         <div className="container-fluid">
             <div className="text">
                 <h1>CHADLI Zakaria</h1>
