@@ -1,16 +1,22 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import {BrowserRouter as Router, Route, Routes} from "react-router-dom"
 import AboutMe from './components/AboutMe/AboutMe';
+import Project from './components/Project/Project';
+import ContactMe from './components/ContactMe/ContactMe';
+import Formation from './components/Formation/Formation';
+import Competance from './components/Competance/Competance';
+import 'font-awesome/css/font-awesome.min.css';
 
 function App() {
   return (
-    <Router>
+    <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<AboutMe />} />
-      </Routes>
-    </Router>
+      <AboutMe />
+      <Project />
+      <Competance />
+      <Formation />
+      <ContactMe />
+    </>
   );
 }
 

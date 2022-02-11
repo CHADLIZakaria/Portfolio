@@ -8,19 +8,19 @@ const Navbar = () => {
   return (
     <header className="header" id="header">
         <div className="container">
-            <Link to="/" className="logo">CHADLI</Link>
+            <a href="/" className="logo">CHADLI</a>
             <ul className="main-nav">
                 <li>
-                  <NavLink className="landing-section active" to="/" activeClassname="active">À propos de moi</NavLink>
+                  <a className="landing-section active" href="/" activeClassname="active">À propos de moi</a>
                 </li>
                 <li>
-                  <NavLink className="articles-section" to="/" activeClassname="active">Projets</NavLink>
+                  <a className="articles-section" to="/" activeClassname="active">Projets</a>
                 </li>
                 <li>
-                  <NavLink to="/" className="features-section" activeClassname="active">Compétences</NavLink>
+                  <a href="/" className="features-section" activeClassname="active">Compétences</a>
                 </li>
                 <li>
-                  <NavLink to="/" className="testimonials-section" activeClassname="active">Formation</NavLink>
+                  <a href="/" className="testimonials-section" activeClassname="active">Formation</a>
                 </li>  
             </ul>
         </div>

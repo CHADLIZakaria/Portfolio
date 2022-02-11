@@ -1,3 +1,133 @@
 .landing {
+    background: linear-gradient(0deg, #9A9A9A, white);
+    position: relative;
     margin-top: 72px;
+}
+.landing::before {
+    display: block;
+    position: absolute;
+    border-radius: 0% 0% 100% 100%;
+    width: 100%;
+    height: 6vh;
+    background-color: rgb(236, 236, 236);
+    left: 0;
+    top: 97%;
+}
+.landing::after {
+    display: block;
+    position: absolute;
+    border-radius: 100%0%;
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    right: 0;
+    top: 90%;
+}
+.landing .container-fluid {
+    height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    padding: 0 30px 120px;
+}
+@media(max-width: 767px) {
+    .landing {
+        margin-top: 112px;
+    }
+    .landing .container-fluid{
+        position: relative;
+        height: calc(100vh - 112px);
+       flex-direction: column-reverse;
+    }
+}
+.landing .text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 991px) {
+    .landing .text {
+        text-align: center;
+    }
+}
+.landing .image {
+    flex: 1;
+}
+.landing .text h1 {
+    font-size: 5em;
+    margin: 0;
+    font-weight: bold;
+    width: fit-content;
+    border-right: 3px solid var(--main-color);
+    overflow: hidden;
+    animation: blink .7s infinite;
+    white-space: nowrap;
+}
+@media(max-width: 991px) {
+    .landing .text h1 {
+        font-size: 2.5em;
+    }
+}
+.landing .text p {
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 5px 0 0;
+    overflow: hidden;
+    width: fit-content;
+    border-right: 3px solid var(--main-color);
+    animation: blink .7s infinite;
+}
+@media(max-width: 991px) {
+    .landing .text p {
+        font-size: 1em;
+    }
+}
+@keyframes control-width {
+    from {
+        width: 0;
+    }
+    to {
+        width: 449px;
+    }
+}
+@keyframes blink {
+    from {
+        border-right-color: var(--main-color);
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
+
+@media(max-width: 991px) {
+    .landing .text p {
+        margin: 10px auto;
+    }
+}
+.landing .image img {
+    position: relative;
+    width: 100%;
+    animation: up-and-down 5s linear infinite;
+}
+@media(max-width: 991px) {
+    .landing .image{
+       /* display: none; */
+    }
+}
+.landing .go-down {
+    color: var(--main-color);
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+    z-index: 1;
+}
+.landing .go-down i {
+    animation: bouncing 1.5s infinite;
+}
+.landing .go-down:hover {
+    color: var(--main-color-alt);
 }
