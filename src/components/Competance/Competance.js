@@ -5,9 +5,6 @@ import { competances } from '../../data'
 
 
 const Competance = () => {
-    useEffect(() => {
-        competances.map(element => console.log(element))
-    }, [])
     
     return (
         <section className="features" id="competance">

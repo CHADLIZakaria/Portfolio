@@ -111,11 +111,7 @@
     width: 100%;
     animation: up-and-down 5s linear infinite;
 }
-@media(max-width: 991px) {
-    .landing .image{
-       /* display: none; */
-    }
-}
+
 .landing .go-down {
     color: var(--main-color);
     position: absolute;
@@ -125,7 +121,7 @@
     transition: var(--main-transition);
     z-index: 1;
 }
-.landing .go-down i {
+.landing .go-down {
     animation: bouncing 1.5s infinite;
 }
 .landing .go-down:hover {

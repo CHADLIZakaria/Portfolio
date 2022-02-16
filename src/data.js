@@ -1,4 +1,15 @@
-export const projects = []
+export const projectsData = [
+    {
+        "title": "Site 1",
+        "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
+        "category": "web"   
+    },
+    {
+        "title": "Mobile 1",
+        "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
+        "category": "mobile" 
+    }
+]
 export const competances = [
     {
         'domaine': {
@@ -75,6 +86,28 @@ export const competances = [
                 'image':  require('./images/sql-server.png'),
             },
         ]
+    }
+]
+export const formations = [
+    {   
+        'formationName': 'Baccaleaurat',
+        'formationDescription': 'Baccaleaurat option Physics Groupe pédagogique alpha',
+        'formationImage': require('./images/alpha.png'),
+    },
+    {
+        'formationName': 'DEUST MIP',
+        'formationDescription': 'Diplôme d\'Etudes Universitaires Scientifiques et Techniques en Math Informatique Physiques',
+        'formationImage': require('./images/fsts.png'),
+    },
+    {
+        'formationName': 'LST GI',
+        'formationDescription': 'Licences Sciences et Techniques en Génie informatique',
+        'formationImage': require('./images/fsts.png'),
+    },
+    {
+        'formationName': 'Master IMSC',
+        'formationDescription': 'Master en Informtique et Modélisation des Sytèmes Complexes',
+        'formationImage': require('./images/fsts.png'),
     }
 ]
 

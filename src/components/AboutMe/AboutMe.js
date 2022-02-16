@@ -1,22 +1,25 @@
 import React from 'react'
 import './AboutMe.scss' 
+import {faAngleDoubleDown} from '@fortawesome/fontawesome-free-solid'
+import myImage from '../../images/my_image.png'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 const AboutMe = () => {
-  return (
-      <section className="landing" id="aboutMe">
-        <div className="container-fluid">
-            <div className="text">
-                <h1>CHADLI Zakaria</h1>
-                <p>Developper Full Stack</p>
+    return (
+        <section className="landing" id="aboutMe">
+            <div className="container-fluid">
+                <div className="text">
+                    <h1>CHADLI Zakaria</h1>
+                    <p>Developper Full Stack</p>
+                </div>
+                <div className="image">
+                    <img src={myImage} alt="" />
+                </div>
             </div>
-            <div className="image">
-                <img src="../../images/my_image.png" alt="" />
-            </div>
-        </div>
-        <a href="#articles-section" className="go-down">
-            <i className="fas fa-angle-double-down fa-2x"></i>
-        </a>
-    </section>
-  )
+            <a href="#project" className="go-down">
+                <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
+            </a>
+        </section>
+    )
 }
 
 export default AboutMe

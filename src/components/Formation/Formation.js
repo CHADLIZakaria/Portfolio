@@ -1,14 +1,20 @@
 import React from 'react'
 import './Formation.scss'
-import alpha from '../../images/alpha.png'
-import fsts from '../../images/fsts.png'
+import { formations } from '../../data'
 
 const Formation = () => {
     return (
         <section class="testimonials" id="formation">
         <h2 class="main-title">Formation</h2>
         <div class="container">
-            <div class="box">
+            {formations.map(formation => 
+                <div className='box'>
+                    <img src={formation.formationImage} />
+                    <h3>{formation.formationName}</h3>
+                    <span className='title'>{formation.formationDescription}</span>
+                </div>    
+            )}
+            {/* <div class="box">
                 <img src={alpha} alt="" />
                 <h3>Baccaleaurat</h3>
                 <span class="title">Baccaleaurat option Physics Groupe pédagogique alpha</span>
@@ -27,7 +33,7 @@ const Formation = () => {
                 <img src={fsts} alt="" />
                 <h3>Master IMSC</h3>
                 <span class="title">Master en Informtique et Modélisation des Sytèmes Complexes</span>
-            </div>
+            </div> */}
         </div>
         </section>
     )

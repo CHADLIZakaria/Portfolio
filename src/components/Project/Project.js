@@ -1,31 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './Project.scss'
+import { useState } from 'react'
+import { projectsData } from '../../data'
 
 const Project = () => {
+    const [projects, setProjects] = useState([])
+    const [classActive, setClassActive] = useState("all")
+    useEffect(() => {
+        setProjects(projectsData)
+    }, [])
+    
+
+    const filterProject = (category) => {
+        setClassActive(category.toLowerCase())
+        if(category==='all') 
+            setProjects(projectsData)
+        else
+            setProjects(projectsData.filter(project => project.category==category))
+    }
     return (
-        <section class="articles" id="project">
-            <h2 class="main-title">Projets</h2>
-            <div class="container">
-                <div class="box">
-                    <img src="images/advantages-limitations-of-diary-studies-1024x600.png" alt="" />
-                    <div class="content">
-                        <h3>Website eCommerce</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!</p>
+        <section className="projects" id="project">
+            <h2 className="main-title">Projets</h2>
+            <div className='categories'>
+                <button className={`${classActive==='all' && 'active'}`} onClick={() => filterProject("all")}>
+                    All
+                </button>
+                <button className={`${classActive==='web' && 'active'}`} onClick={() => filterProject("web")}>
+                    Web
+                </button>
+                <button className={`${classActive==='mobile' && 'active'}`} onClick={() => filterProject("mobile")}>
+                    Mobile
+                </button>
+                <button className={`${classActive==='open-source' && 'active'}`} onClick={() => filterProject("open-source")}>Open source</button>
+            </div>
+            <div className="container">
+                {projects.map(project => (
+                    <div className='box'>
+                        <div className="content">
+                            <h3>{project.title}</h3>
+                            <p>{project.subtitle}</p> 
+                        </div>
+                        <div className="info">
+                            <a href="">Read More <i className="fas fa-long-arrow-alt-right"></i></a>
+                        </div>
                     </div>
-                    <div class="info">
-                        <a href="">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                    </div>
-                </div>
-                <div class="box">
-                    <img src="images/csm_5b69b61ebf81ab55c4cd1a50581513f372b83c50-fp-16-9-0-0_8dff26a57d.jpeg" alt="" />
-                    <div class="content">
-                        <h3>Test Title</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!</p>
-                    </div>
-                    <div class="info">
-                        <a href="">Read More <i class="fas fa-long-arrow-alt-right"></i></a>
-                    </div>
-                </div>    
+                ))}
             </div>
         </section>
     )
