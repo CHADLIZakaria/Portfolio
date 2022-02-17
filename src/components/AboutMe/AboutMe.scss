@@ -1,9 +1,9 @@
-.landing {
+.aboutMe {
     background: linear-gradient(0deg, #9A9A9A, white);
     position: relative;
     margin-top: 72px;
 }
-.landing::before {
+.aboutMe::before {
     display: block;
     position: absolute;
     border-radius: 0% 0% 100% 100%;
@@ -13,7 +13,7 @@
     left: 0;
     top: 97%;
 }
-.landing::after {
+.aboutMe::after {
     display: block;
     position: absolute;
     border-radius: 100%0%;
@@ -23,23 +23,23 @@
     right: 0;
     top: 90%;
 }
-.landing .container-fluid {
+.aboutMe .container-fluid {
     height: calc(100vh - 72px);
     display: flex;
     align-items: center;
     padding: 0 30px 120px;
 }
 @media(max-width: 767px) {
-    .landing {
+    .aboutMe {
         margin-top: 112px;
     }
-    .landing .container-fluid{
+    .aboutMe .container-fluid{
         position: relative;
         height: calc(100vh - 112px);
-       flex-direction: column-reverse;
+        flex-direction: column-reverse;
     }
 }
-.landing .text {
+.aboutMe .text {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -47,14 +47,16 @@
     justify-content: center;
 }
 @media(max-width: 991px) {
-    .landing .text {
+    .aboutMe .text {
         text-align: center;
     }
 }
-.landing .image {
+.aboutMe .image {
     flex: 1;
+    display: flex;
+    align-items: flex-end;
 }
-.landing .text h1 {
+.aboutMe .text h1 {
     font-size: 5em;
     margin: 0;
     font-weight: bold;
@@ -64,12 +66,15 @@
     animation: blink .7s infinite;
     white-space: nowrap;
 }
+.aboutMe .text h1.finished {
+    border-right: none;
+}
 @media(max-width: 991px) {
-    .landing .text h1 {
+    .aboutMe .text h1 {
         font-size: 2.5em;
     }
 }
-.landing .text p {
+.aboutMe .text p {
     font-size: 2.5em;
     font-weight: bold;
     line-height: 1.5;
@@ -77,10 +82,10 @@
     overflow: hidden;
     width: fit-content;
     border-right: 3px solid var(--main-color);
-    animation: blink .7s infinite;
+    animation: blink .5s infinite;
 }
 @media(max-width: 991px) {
-    .landing .text p {
+    .aboutMe .text p {
         font-size: 1em;
     }
 }
@@ -102,17 +107,17 @@
 }
 
 @media(max-width: 991px) {
-    .landing .text p {
+    .aboutMe .text p {
         margin: 10px auto;
     }
 }
-.landing .image img {
+.aboutMe .image img {
     position: relative;
     width: 100%;
     animation: up-and-down 5s linear infinite;
 }
 
-.landing .go-down {
+.aboutMe .go-down {
     color: var(--main-color);
     position: absolute;
     bottom: 30px;
@@ -121,9 +126,9 @@
     transition: var(--main-transition);
     z-index: 1;
 }
-.landing .go-down {
+.aboutMe .go-down {
     animation: bouncing 1.5s infinite;
 }
-.landing .go-down:hover {
+.aboutMe .go-down:hover {
     color: var(--main-color-alt);
 }

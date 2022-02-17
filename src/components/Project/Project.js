@@ -34,8 +34,8 @@ const Project = () => {
                 <button className={`${classActive==='open-source' && 'active'}`} onClick={() => filterProject("open-source")}>Open source</button>
             </div>
             <div className="container">
-                {projects.map(project => (
-                    <div className='box'>
+                {projects.map((project, index) => (
+                    <div className='box' key={index}>
                         <div className="content">
                             <h3>{project.title}</h3>
                             <p>{project.subtitle}</p> 

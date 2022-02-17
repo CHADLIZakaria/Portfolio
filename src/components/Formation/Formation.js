@@ -4,11 +4,11 @@ import { formations } from '../../data'
 
 const Formation = () => {
     return (
-        <section class="testimonials" id="formation">
-        <h2 class="main-title">Formation</h2>
-        <div class="container">
-            {formations.map(formation => 
-                <div className='box'>
+        <section className="testimonials" id="formation">
+        <h2 className="main-title">Formation</h2>
+        <div className="container">
+            {formations.map((formation, index) => 
+                <div className='box' key={index}>
                     <img src={formation.formationImage} />
                     <h3>{formation.formationName}</h3>
                     <span className='title'>{formation.formationDescription}</span>

@@ -11,16 +11,16 @@ const Navbar = () => {
             <a href="/" className="logo">CHADLI</a>
             <ul className="main-nav">
                 <li>
-                  <a href="#aboutMe" className="landing-section active" activeClassname="active">À propos de moi</a>
+                  <a href="#aboutMe" className="landing-section active">À propos de moi</a>
                 </li>
                 <li>
-                  <a href="#projet" className="articles-section"  activeClassname="active">Projets</a>
+                  <a href="#project" className="articles-section">Projets</a>
                 </li>
                 <li>
-                  <a href="#competance" className="features-section" activeClassname="active">Compétances</a>
+                  <a href="#competance" className="features-section">Compétances</a>
                 </li>
                 <li>
-                  <a href="#formation" className="testimonials-section" activeClassname="active">Formation</a>
+                  <a href="#formation" className="testimonials-section">Formation</a>
                 </li>  
             </ul>
         </div>

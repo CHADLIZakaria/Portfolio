@@ -11,16 +11,16 @@ const Competance = () => {
             <h2 className="main-title">Compétences</h2>
             <div className="container">
                 {
-                    competances.map(competance => 
-                        <div className={`box ${competance.domaine.className}`}>
+                    competances.map((competance, index) => 
+                        <div className={`box ${competance.domaine.className}`} key={index}>
                             <div className='img-holder'>
                                 <h2>{competance.domaine.name}</h2>
                                 <img src={competance.domaine.image} />
                             </div>
                             <ul>
                                 {competance.values.map(
-                                    element => 
-                                    <li>
+                                    (element, index) => 
+                                    <li key={index}>
                                         <img src={element.image} />
                                         {element.title}
                                     </li>

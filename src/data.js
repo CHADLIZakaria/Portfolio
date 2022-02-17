@@ -36,7 +36,7 @@ export const competances = [
             },
             {
                 'title':'React',
-                'image': require('./images/bootstrap.png'),
+                'image': require('./images/react.png'),
             },
             {
                 'title':'Flutter',
