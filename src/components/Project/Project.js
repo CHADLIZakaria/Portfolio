@@ -16,7 +16,7 @@ const Project = () => {
         if(category==='all') 
             setProjects(projectsData)
         else
-            setProjects(projectsData.filter(project => project.category==category))
+            setProjects(projectsData.filter(project => project.category===category))
     }
     return (
         <section className="projects" id="project">
@@ -36,12 +36,21 @@ const Project = () => {
             <div className="container">
                 {projects.map((project, index) => (
                     <div className='box' key={index}>
-                        <div className="content">
-                            <h3>{project.title}</h3>
-                            <p>{project.subtitle}</p> 
+                        <h3 className='project-title'>{project.title}</h3>
+                        <div className="image-project" style={{backgroundImage: `url(${project.image})`}}>
+                            <div className='project-description'>
+                                <p>{project.description}</p>
+                                <ul className='technologies'>
+                                    {project.technologies.map((technology,index) => (
+                                        <li key={index}>{technology}</li>    
+                                        )
+                                    )}
+                                </ul>
+                            </div>
                         </div>
                         <div className="info">
-                            <a href="">Read More <i className="fas fa-long-arrow-alt-right"></i></a>
+                            <button>View Website</button>
+                            <button>Github</button>
                         </div>
                     </div>
                 ))}

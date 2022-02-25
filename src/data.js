@@ -1,13 +1,27 @@
 export const projectsData = [
     {
-        "title": "Site 1",
-        "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
-        "category": "web"   
+        "title": "Movies",
+        "category": "web",
+        "image": require('./images/movie_app.png'),
+        description: 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
+        technologies: [
+            'HTML5',
+            'CSS3',
+            'Js',
+            'React',
+        ]
     },
     {
         "title": "Mobile 1",
         "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
-        "category": "mobile" 
+        "category": "mobile",
+        description: 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
+        "technologies": [
+            'HTML5',
+            'CSS3',
+            'Js',
+            'Spring Boot',
+        ]
     }
 ]
 export const competances = [
