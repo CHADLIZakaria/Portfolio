@@ -1,21 +1,72 @@
+const html5={
+    'title':'HTML5',
+    'image': require('./images/html5.png'),
+}
+const css3={
+    'title':'CSS3',
+    'image': require('./images/css3.png'),
+}
+const js={
+    'title':'Javascript',
+    'image':  require('./images/js.png')
+}
+const react={
+    'title':'React',
+    'image': require('./images/react.png'),
+}
+const flutter={
+    'title':'Flutter',
+    'image': require('./images/flutter.png'),
+}
+const bootstrap={  
+    'title':'Bootstrap4',
+    'image':  require('./images/bootstrap.png')
+}
+const java={  
+    'title': 'Java',
+    'image': require('./images/java.png'),
+}
+const python={  
+    'title': 'Python',
+    'image': require('./images/python.png'),
+}
+const php={  
+    'title': 'PHP',
+    'image':  require('./images/php.png'),
+}
+const mysql={  
+    'title': 'MySQL',
+    'image': require('./images/mysql.png'),
+}
+const postgresql={
+    'title': 'PostgreSQL',
+    'image': require('./images/postgresql.png'),
+}
+const sqlserver={
+    'title': 'Sql Server',
+    'image':  require('./images/sql-server.png'),
+}
+
 export const projectsData = [
     {
         "title": "Movies",
         "category": "web",
         "image": require('./images/movie_app.png'),
-        description: 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
-        technologies: [
-            'HTML5',
-            'CSS3',
-            'Js',
-            'React',
+        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
+        "github": 'https://github.com/CHADLIZakaria/Movie',
+        "website": 'https://movie05.netlify.app/',
+        "technologies": [
+            html5,
+            css3,
+            js,
+            react
         ]
     },
     {
         "title": "Mobile 1",
         "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
         "category": "mobile",
-        description: 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
+        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
         "technologies": [
             'HTML5',
             'CSS3',
@@ -32,30 +83,12 @@ export const competances = [
             'className': 'front-end',
         },
         'values' : [
-            {
-                'title':'HTML5',
-                'image': require('./images/html5.png'),
-            },
-            {
-                'title':'CSS3',
-                'image': require('./images/css3.png'),
-            },
-            {
-                'title':'Javascript',
-                'image':  require('./images/js.png'),
-            },
-            {
-                'title':'Bootstrap4',
-                'image':  require('./images/bootstrap.png'),
-            },
-            {
-                'title':'React',
-                'image': require('./images/react.png'),
-            },
-            {
-                'title':'Flutter',
-                'image': require('./images/flutter.png'),
-            },
+            html5,
+            css3,
+            js,
+            bootstrap,
+            react,
+            flutter
         ],
     },
     {

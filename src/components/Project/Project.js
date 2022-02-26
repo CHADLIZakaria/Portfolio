@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './Project.scss'
 import { useState } from 'react'
 import { projectsData } from '../../data'
+import { Link } from 'react-router-dom'
 
 const Project = () => {
     const [projects, setProjects] = useState([])
@@ -42,15 +43,18 @@ const Project = () => {
                                 <p>{project.description}</p>
                                 <ul className='technologies'>
                                     {project.technologies.map((technology,index) => (
-                                        <li key={index}>{technology}</li>    
+                                        <li key={index}>
+                                            <img src={technology.image} />
+                                            {technology.title}
+                                        </li>    
                                         )
                                     )}
                                 </ul>
                             </div>
                         </div>
                         <div className="info">
-                            <button>View Website</button>
-                            <button>Github</button>
+                            <a target='_blank' href={`${project.github}`}>Github</a>
+                            <a target='_blank' href={`${project.website}`}>View demo</a>
                         </div>
                     </div>
                 ))}
