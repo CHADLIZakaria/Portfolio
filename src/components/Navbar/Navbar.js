@@ -1,26 +1,35 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link } from 'react-scroll'
 import './Navbar.scss'
 
 const Navbar = () => {
 
+  
 
   return (
     <header className="header" id="header">
         <div className="container">
-            <a href="/" className="logo">CHADLI</a>
+            <Link to="aboutMe"  offset={0} spy={true} className="logo">CHADLI</Link>
             <ul className="main-nav">
                 <li>
-                  <a href="#aboutMe" className="landing-section active">À propos de moi</a>
+                    <Link to='aboutMe' offset={-72} spy={true} >
+                      À propos de moi
+                    </Link>
                 </li>
                 <li>
-                  <a href="#project" className="articles-section">Projets</a>
+                  <Link to='project'  offset={-72} spy={true}>
+                      Projets
+                  </Link>
                 </li>
                 <li>
-                  <a href="#competance" className="features-section">Compétances</a>
+                  <Link to='competance'  offset={-72} spy={true}>
+                    Compétance
+                  </Link>
                 </li>
                 <li>
-                  <a href="#formation" className="testimonials-section">Formation</a>
+                  <Link to='formation'  offset={-72} spy={true}>
+                    Formation
+                  </Link>
                 </li>  
             </ul>
         </div>

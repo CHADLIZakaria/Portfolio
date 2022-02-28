@@ -4,7 +4,7 @@
     position: relative;
     .container {
         display: flex;
-        gap: 40px;
+        gap: 10px;
     }
     .categories {
         display: flex;
@@ -69,14 +69,18 @@
                 padding: 10px;
                 color: #0c0d0e;
                 transition: all .3s ease-in-out;
+                display: flex;
+                flex-direction: column;
                 .technologies {
                     display: flex;
-                    flex-direction: column;
-                    gap: 10px;
+                    flex-wrap: wrap;
+                    flex: 1;
                     li {
                         display: flex;
                         align-items: center;
                         gap: 10px;
+                        flex: 50%;
+                        margin-bottom: 10px;
                         img {
                             width: 30px;
                             height: 30px;
@@ -117,8 +121,16 @@
             a {
                 color: var(--main-color);
                 font-weight: bold;
+                border: 1px solid var(--main-color);
+                padding: 5px;
+                border-radius: 6px;
+                display: flex;
+                gap: 5px;
+                align-items: center;
+                cursor: pointer;
             }
         }
     }
 }
+
 

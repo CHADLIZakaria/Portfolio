@@ -1,28 +1,34 @@
-import React, { useEffect } from 'react'
-import './Project.scss'
-import { useState } from 'react'
+import { faCamera } from '@fortawesome/fontawesome-free-solid'
+import { faGithub, faInternetExplorer } from "@fortawesome/free-brands-svg-icons"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React, { useEffect, useState } from 'react'
 import { projectsData } from '../../data'
-import { Link } from 'react-router-dom'
+import Carousel from '../Carousel/Carousel'
+import './Project.scss'
+
 
 const Project = () => {
     const [projects, setProjects] = useState([])
-    const [classActive, setClassActive] = useState("all")
+    //const [classActive, setClassActive] = useState("all")
+    const [currentCarousel, setCurrentCarousel] = useState({showCarousel: false, currentIndexCarousel: 0})
+
+    
     useEffect(() => {
         setProjects(projectsData)
     }, [])
     
 
-    const filterProject = (category) => {
-        setClassActive(category.toLowerCase())
-        if(category==='all') 
-            setProjects(projectsData)
-        else
-            setProjects(projectsData.filter(project => project.category===category))
-    }
+    // const filterProject = (category) => {
+    //     setClassActive(category.toLowerCase())
+    //     if(category==='all') 
+    //         setProjects(projectsData)
+    //     else
+    //         setProjects(projectsData.filter(project => project.category===category))
+    // }
     return (
         <section className="projects" id="project">
             <h2 className="main-title">Projets</h2>
-            <div className='categories'>
+            {/* <div className='categories'>
                 <button className={`${classActive==='all' && 'active'}`} onClick={() => filterProject("all")}>
                     All
                 </button>
@@ -32,8 +38,7 @@ const Project = () => {
                 <button className={`${classActive==='mobile' && 'active'}`} onClick={() => filterProject("mobile")}>
                     Mobile
                 </button>
-                <button className={`${classActive==='open-source' && 'active'}`} onClick={() => filterProject("open-source")}>Open source</button>
-            </div>
+            </div> */}
             <div className="container">
                 {projects.map((project, index) => (
                     <div className='box' key={index}>
@@ -53,12 +58,34 @@ const Project = () => {
                             </div>
                         </div>
                         <div className="info">
-                            <a target='_blank' href={`${project.github}`}>Github</a>
-                            <a target='_blank' href={`${project.website}`}>View demo</a>
+                            {project.github!=='' && 
+                                <a target='_blank' href={`${project.github}`}>
+                                    Github
+                                    <FontAwesomeIcon icon={faGithub} />
+                                </a>
+                            }
+                            <a target='_blank' onClick={() => {
+                                setCurrentCarousel({currentIndexCarousel: index, showCarousel: true})}
+                            }>
+                                Screenshoot
+                                <FontAwesomeIcon icon={faCamera} />
+                            </a>
+                            <a target='_blank' href={`${project.website}`}>
+                                Website
+                                <FontAwesomeIcon icon={faInternetExplorer} />
+                            </a>
                         </div>
                     </div>
                 ))}
             </div>
+            {currentCarousel.showCarousel &&
+                    <Carousel imageData={projectsData[currentCarousel.currentIndexCarousel].screenshoot} 
+                        onClose={() => 
+                            setCurrentCarousel({...currentCarousel, showCarousel: false})} 
+                        />
+            }
+
+          
         </section>
     )
 }

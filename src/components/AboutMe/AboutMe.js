@@ -3,6 +3,7 @@ import './AboutMe.scss'
 import {faAngleDoubleDown} from '@fortawesome/fontawesome-free-solid'
 import myImage from '../../images/my_image.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { Link } from 'react-scroll'
 const AboutMe = () => {
 
     const [currentName, setCurrentName]=useState('')
@@ -72,9 +73,9 @@ const AboutMe = () => {
                     <img src={myImage} alt="" />
                 </div>
             </div>
-            <a href="#project" className="go-down">
+            <Link to="project" className="go-down">
                 <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
-            </a>
+            </Link>
         </section>
     )
 }

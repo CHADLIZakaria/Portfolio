@@ -30,7 +30,6 @@
             }
         }
     }
-    
     .main-nav {
         display: flex;
         @media(max-width: 767px) {
@@ -50,10 +49,8 @@
                 padding: 0 30px;
                 transition: var(--main-transition);
                 overflow: hidden;
-                a:hover::before,
-                a.active::before {
-                    left: 0%;
-                }
+                cursor: pointer;
+               
                 @media(max-width: 767px) {
                     & {
                         padding: 10px;
@@ -71,12 +68,12 @@
                     transition: var(--main-transition);
                 }
                 &:hover,
-                .active {
+                &.active {
                     color: var(--main-color);
                     background-color: #fafafa;
                 }
                 &:hover::before,
-                .active::before {
+                &.active::before {
                     left: 0%;
                 }
             }

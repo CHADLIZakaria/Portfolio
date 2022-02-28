@@ -26,6 +26,10 @@ const java={
     'title': 'Java',
     'image': require('./images/java.png'),
 }
+const springboot={
+    'title': 'Spring boot',
+    'image': require('./images/spring-boot-logo.png'),
+}
 const python={  
     'title': 'Python',
     'image': require('./images/python.png'),
@@ -49,10 +53,30 @@ const sqlserver={
 
 export const projectsData = [
     {
+        "title": "Snooker",
+        "description": "Site web qui gère les joueurs, les tables de snooker, les gérants des tables",
+        "category": "web",
+        "website": "https://snooker-chadli.herokuapp.com/",
+        "github": '',
+        "image": require('./images/dashboard_snooker.png'),
+        "technologies": [
+            html5, 
+            css3, 
+            js,
+            bootstrap,
+            springboot,
+        ],
+        screenshoot: [
+            require('./images/dashboard_snooker.png'),
+            require('./images/ajouter_table_snooker.png'),
+            require('./images/table_snooker.png'),
+        ]
+    },
+    {
         "title": "Movies",
+        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
         "category": "web",
         "image": require('./images/movie_app.png'),
-        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
         "github": 'https://github.com/CHADLIZakaria/Movie',
         "website": 'https://movie05.netlify.app/',
         "technologies": [
@@ -60,20 +84,11 @@ export const projectsData = [
             css3,
             js,
             react
+        ],
+        screenshoot: [
+            require('./images/home_movie.png'),
         ]
     },
-    {
-        "title": "Mobile 1",
-        "subtitle":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fuga excepturi vel soluta explicabo perferendis incidunt! Porro ipsam enim facilis eveniet similique ea quidem eaque voluptates, commodi nihil, veniam obcaecati!",
-        "category": "mobile",
-        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
-        "technologies": [
-            'HTML5',
-            'CSS3',
-            'Js',
-            'Spring Boot',
-        ]
-    }
 ]
 export const competances = [
     {
@@ -98,20 +113,10 @@ export const competances = [
             'className': 'back-end',
         },
         'values': [
-            {
-                'title': 'Java',
-                'image': require('./images/java.png'),
-            },
-            {
-                'title': 'Python',
-                'image': require('./images/python.png'),
-            },
-            {
-                'title': 'PHP',
-                'image':  require('./images/php.png'),
-            },
+            java,
+            python,
+            php,
         ],
-        
     }, 
     {
         'domaine': {
@@ -120,18 +125,9 @@ export const competances = [
             'className': 'database',
         },
         'values': [
-            {
-                'title': 'MySQL',
-                'image': require('./images/mysql.png'),
-            },
-            {
-                'title': 'PostgreSQL',
-                'image': require('./images/postgresql.png'),
-            },
-            {
-                'title': 'Sql Server',
-                'image':  require('./images/sql-server.png'),
-            },
+           mysql,
+           postgresql,
+           sqlserver,
         ]
     }
 ]
