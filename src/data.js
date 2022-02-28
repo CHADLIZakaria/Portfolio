@@ -87,6 +87,8 @@ export const projectsData = [
         ],
         screenshoot: [
             require('./images/home_movie.png'),
+            require('./images/movie.png'),
+            
         ]
     },
 ]

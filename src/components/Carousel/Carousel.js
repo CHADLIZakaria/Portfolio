@@ -18,7 +18,7 @@ const Carousel = ({imageData, onClose}) => {
             <FontAwesomeIcon icon={faXmark} className='close' onClick={onClose}/>
             <div className='carousel-inner'>
                 {imageData.map((screen, index) => (
-                    <div className={`carousel-item ${index === activeIndex ? 'active' : ''}`} >
+                    <div key={index} className={`carousel-item ${index === activeIndex ? 'active' : ''}`} >
                         <img src={screen} />
                     </div>
                 ))}

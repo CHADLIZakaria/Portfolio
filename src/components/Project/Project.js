@@ -84,8 +84,6 @@ const Project = () => {
                             setCurrentCarousel({...currentCarousel, showCarousel: false})} 
                         />
             }
-
-          
         </section>
     )
 }

@@ -50,7 +50,6 @@
                 transition: var(--main-transition);
                 overflow: hidden;
                 cursor: pointer;
-               
                 @media(max-width: 767px) {
                     & {
                         padding: 10px;

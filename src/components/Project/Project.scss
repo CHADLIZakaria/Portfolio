@@ -5,6 +5,9 @@
     .container {
         display: flex;
         gap: 10px;
+        @media(max-width: 1200px) {
+            flex-direction: column;
+        }
     }
     .categories {
         display: flex;
@@ -39,8 +42,7 @@
         flex: 1;
         &:hover {
             transform: translateY(-10px);
-            box-shadow: 0 2px 15px black;
-            
+            box-shadow: 0 2px 15px black; 
         }
         .project-title {
             text-align: center;
@@ -89,35 +91,12 @@
                 }
             }
         }
-        img{
-            height: 100%;
-            width: 100%;
-        }
-        .content {
-            padding: 20px;
-            h3 {
-                margin: 0;
-            }
-            p {
-                margin: 10px 0 0;
-                line-height: 1.5;
-                color: #777;
-            }
-        }
         .info {
             padding: 20px;
             display: flex;
             justify-content: flex-end;
             align-items: center;
             gap: 10px;
-            button {
-                padding: 5px;
-                background: transparent;
-                color: var(--main-color);
-                border-radius: 6px;
-                cursor: pointer;
-                border: 1px solid var(--main-color);
-            }
             a {
                 color: var(--main-color);
                 font-weight: bold;
@@ -128,6 +107,9 @@
                 gap: 5px;
                 align-items: center;
                 cursor: pointer;
+                @media (max-width: 771px) {
+                    font-size: 12px;
+                }
             }
         }
     }

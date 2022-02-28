@@ -44,7 +44,7 @@ const ContactMe = () => {
                     </div>
                 </div>
             </div>
-            <p className="copyright">Made with &lt;3 CHADLI</p>
+            <p className="copyright">Made by &lt;: CHADLI Zakaria</p>
         </div>
     )
 }

@@ -4,7 +4,7 @@ import { formations } from '../../data'
 
 const Formation = () => {
     return (
-        <section className="testimonials" id="formation">
+        <section className="formations" id="formation">
         <h2 className="main-title">Formation</h2>
         <div className="container">
             {formations.map((formation, index) => 
