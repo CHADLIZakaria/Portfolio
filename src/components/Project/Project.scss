@@ -39,7 +39,7 @@
         border-radius: 6px;
         overflow: hidden;
         transition: transform var(--main-transition), box-shadow var(--main-transition);
-        flex: 1;
+        width: 50%;
         &:hover {
             transform: translateY(-10px);
             box-shadow: 0 2px 15px black; 

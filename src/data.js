@@ -26,10 +26,6 @@ const java={
     'title': 'Java',
     'image': require('./images/java.png'),
 }
-const springboot={
-    'title': 'Spring boot',
-    'image': require('./images/spring-boot-logo.png'),
-}
 const python={  
     'title': 'Python',
     'image': require('./images/python.png'),
@@ -50,28 +46,12 @@ const sqlserver={
     'title': 'Sql Server',
     'image':  require('./images/sql-server.png'),
 }
+const angular={
+    'title': 'Angular',
+    'image':  require('./images/angular.png'),
+}
 
 export const projectsData = [
-    {
-        "title": "Snooker",
-        "description": "Site web qui gère les joueurs, les tables de snooker, les gérants des tables",
-        "category": "web",
-        "website": "https://snooker-chadli.herokuapp.com/",
-        "github": '',
-        "image": require('./images/dashboard_snooker.png'),
-        "technologies": [
-            html5, 
-            css3, 
-            js,
-            bootstrap,
-            springboot,
-        ],
-        screenshoot: [
-            require('./images/dashboard_snooker.png'),
-            require('./images/ajouter_table_snooker.png'),
-            require('./images/table_snooker.png'),
-        ]
-    },
     {
         "title": "Movies",
         "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
@@ -87,8 +67,7 @@ export const projectsData = [
         ],
         screenshoot: [
             require('./images/home_movie.png'),
-            require('./images/movie.png'),
-            
+            require('./images/movie.png')
         ]
     },
 ]
@@ -96,40 +75,41 @@ export const competances = [
     {
         'domaine': {
             'name': 'Front End',
-            'image':  require('./images/gestion_etat_command.png'),
+            'image':  require('./images/frontend-background.png'),
             'className': 'front-end',
         },
         'values' : [
             html5,
+            angular,
             css3,
-            js,
-            bootstrap,
             react,
-            flutter
+            js,
+            flutter,
+            bootstrap
         ],
     },
     {
         'domaine': {
             'name': 'Back End',
             'image':  require('./images/backend-background.jpg'),
-            'className': 'back-end',
+            'className': 'back-end'
         },
         'values': [
             java,
             python,
-            php,
+            php
         ],
     }, 
     {
         'domaine': {
             'name': 'Database',
             'image':  require('./images/database.jpeg'),
-            'className': 'database',
+            'className': 'database'
         },
         'values': [
            mysql,
            postgresql,
-           sqlserver,
+           sqlserver
         ]
     }
 ]
@@ -153,6 +133,36 @@ export const formations = [
         'formationName': 'Master IMSC',
         'formationDescription': 'Master en Informtique et Modélisation des Sytèmes Complexes',
         'formationImage': require('./images/fsts.png'),
+    }
+]
+export const certifications = [
+    {
+        'name': 'IBM Full Stack Software Developer',
+        'societyName': 'Coursera',
+        'societyLogo': require('./images/coursera.png'),
+        'date': 'oct. 2023',
+        'url': 'https://www.coursera.org/account/accomplishments/specialization/certificate/42AHDBBQDPJA'
+    },
+    {
+        'name': 'JavaScript Algorithms and Data Structures',
+        'societyName': 'freeCodeCamp',
+        'societyLogo': require('./images/freeCodeCamp.jpg'),
+        'date': 'août 2023',
+        'url': 'https://www.freecodecamp.org/certification/fccef8ce5c1-6f4c-415a-8e23-804f593fd279/javascript-algorithms-and-data-structures'
+    },
+    {
+        'name': 'Responsive Web Design',
+        'societyName': 'freeCodeCamp',
+        'societyLogo': require('./images/freeCodeCamp.jpg'),
+        'date': 'juil. 2023',
+        'url': 'https://www.freecodecamp.org/certification/fccef8ce5c1-6f4c-415a-8e23-804f593fd279/responsive-web-design'
+    },
+    {
+        'name': 'Spécialisation Java Programming and Software Engineering Fundamentals',
+        'societyName': 'Coursera',
+        'societyLogo': require('./images/coursera.png'),
+        'date': 'août 2022',
+        'url': 'https://www.coursera.org/account/accomplishments/specialization/certificate/3TBF9GW38ZMV'
     }
 ]
 

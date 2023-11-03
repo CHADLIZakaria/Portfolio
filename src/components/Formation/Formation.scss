@@ -2,6 +2,7 @@
     padding-top: var(--main-paddgin-top);
     padding-bottom: var(--main-paddgin-bottom);
     position: relative;
+    background-color: var(--section-background-color);
 }
 .formations .container {
     display: grid;
@@ -27,7 +28,7 @@
 }
 .formations .box {
     padding: 20px;
-    background-color: #f1eeee;
+    background-color: white;
     border-radius: 6px;
     position: relative;
     box-shadow: 0 2px 4px rgba(0,0,0,.07);

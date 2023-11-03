@@ -3,9 +3,6 @@ import { Link } from 'react-scroll'
 import './Navbar.scss'
 
 const Navbar = () => {
-
-  
-
   return (
     <header className="header" id="header">
         <div className="container">
@@ -23,12 +20,17 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link to='competance'  offset={-72} spy={true}>
-                    Compétance
+                    Compétances
                   </Link>
                 </li>
                 <li>
+                    <Link to='certifications'  offset={-72} spy={true}>
+                        Certifications
+                    </Link>
+                </li>
+                <li>
                   <Link to='formation'  offset={-72} spy={true}>
-                    Formation
+                    Formations
                   </Link>
                 </li>  
             </ul>
