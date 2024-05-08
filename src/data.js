@@ -1,3 +1,4 @@
+
 const html5={
     'title':'HTML5',
     'image': require('./images/html5.png'),
@@ -51,26 +52,116 @@ const angular={
     'image':  require('./images/angular.png'),
 }
 
-export const projectsData = [
-    {
-        "title": "Movies",
-        "description": 'Site web affiche les films, emissions téléviser en utilisant TheMovieDatabase API',
-        "category": "web",
-        "image": require('./images/movie_app.png'),
-        "github": 'https://github.com/CHADLIZakaria/Movie',
-        "website": 'https://movie05.netlify.app/',
-        "technologies": [
-            html5,
-            css3,
-            js,
-            react
-        ],
-        screenshoot: [
-            require('./images/home_movie.png'),
-            require('./images/movie.png')
-        ]
-    },
-]
+
+export const projectsData = {
+    "en":  [
+        {
+            "title": "Portfolio",
+            "description": 'Portfolio is website with multilingual capabilities, allowing visitors to explore my projects and learn about me in multiple languages. With customizable sections for showcasing my work and background, it delivers a tailored and informative experience.',
+            "category": "web",
+            "image": require('./images/projects/weather/demo-weather1.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                html5,
+                css3,
+                js,
+                react
+            ],
+            screenshoot: [
+                require('./images/projects/weather/demo-weather1.png'),
+                require('./images/projects/weather/demo-weather1.png'),
+            ]
+        },
+        {
+            "title": "Mobile Weather App",
+            "description": 'Weather is a mobile weather app offering daily and hourly forecasts. With a favorites feature, users can save preferred locations for quick access. The app also provides historical weather data and supports multiple languages.',
+            "category": "mobile",
+            "image": require('./images/projects/weather/demo-weather1.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                flutter,
+            ],
+            screenshoot: [
+                require('./images/projects/weather/demo-weather1.png'),
+                require('./images/projects/weather/demo-weather1.png'),
+            ]
+        },
+        {
+            "title": "Movies",
+            "description": 'Explore trending movies and series on our website, with convenient category filters for easy navigation.',
+            "category": "web",
+            "image": require('./images/movie_app.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                html5,
+                css3,
+                js,
+                react
+            ],
+            screenshoot: [
+                require('./images/home_movie.png'),
+                require('./images/movie.png')
+            ]
+        },       
+    ],
+    "fr":  [
+        {
+            "title": "Portfolio",
+            "description": 'Mon portfolio est un site web avec des fonctionnalités multilingues, permettant aux visiteurs d\'explorer mes projets et d\'apprendre à me connaître dans plusieurs langues. Avec des sections personnalisables pour présenter mon travail et mon parcours, il offre une expérience sur mesure et informative.',
+            "category": "web",
+            "image": require('./images/projects/weather/demo-weather1.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                html5,
+                css3,
+                js,
+                react
+            ],
+            screenshoot: [
+                require('./images/projects/weather/demo-weather1.png'),
+                require('./images/projects/weather/demo-weather1.png'),
+            ]
+        },
+        {
+            "title": "Application mobile du météo",
+            "description": '"Weather" est une application mobile fournissant des prévisions météorologiques quotidiennes et horaires. Grâce à sa fonctionnalité de favoris, les utilisateurs peuvent enregistrer leurs emplacements préférés pour un accès rapide. L\'application fournit également des données météorologiques historiques et prend en charge plusieurs langues.',
+            "category": "mobile",
+            "image": require('./images/projects/weather/demo-weather1.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                flutter,
+            ],
+            screenshoot: [
+                require('./images/projects/weather/demo-weather1.png'),
+                require('./images/projects/weather/demo-weather1.png'),
+            ]
+        },
+        {
+            "title": "Movies",
+            "description": 'Découvrez les films et séries populaires sur notre site web, avec des filtres de catégories pratiques pour une navigation facile.',
+            "category": "web",
+            "image": require('./images/movie_app.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": 'https://movie05.netlify.app/',
+            "technologies": [
+                html5,
+                css3,
+                js,
+                react
+            ],
+            screenshoot: [
+                require('./images/home_movie.png'),
+                require('./images/movie.png')
+            ]
+        },       
+    ]
+}
+
 export const competances = [
     {
         'domaine': {
@@ -113,28 +204,42 @@ export const competances = [
         ]
     }
 ]
-export const formations = [
-    {   
-        'formationName': 'Baccaleaurat',
-        'formationDescription': 'Baccaleaurat option Physics Groupe pédagogique alpha',
-        'formationImage': require('./images/alpha.png'),
-    },
-    {
-        'formationName': 'DEUST MIP',
-        'formationDescription': 'Diplôme d\'Etudes Universitaires Scientifiques et Techniques en Math Informatique Physiques',
-        'formationImage': require('./images/fsts.png'),
-    },
-    {
-        'formationName': 'LST GI',
-        'formationDescription': 'Licences Sciences et Techniques en Génie informatique',
-        'formationImage': require('./images/fsts.png'),
-    },
-    {
-        'formationName': 'Master IMSC',
-        'formationDescription': 'Master en Informtique et Modélisation des Sytèmes Complexes',
-        'formationImage': require('./images/fsts.png'),
-    }
-]
+export const formations = {    
+    'en': [
+        {
+            "formationName": "Bachelor's Degree",
+            "formationDescription": "Bachelor's Degree in Physics at Group pédagogique alpha",
+            "formationImage": require('./images/alpha.png')
+        },
+        {
+            "formationName": "LST GI",
+            "formationDescription": "Bachelor of Science in Computer Engineering Sciences and Techniques",
+            "formationImage": require('./images/fsts.png')
+        },
+        {
+            "formationName": "Master IMSC",
+            "formationDescription": "Master's Degree in Computer Science and Modeling of Complex Systems",
+            "formationImage": require('./images/fsts.png')
+        }
+    ],
+    'fr':[
+        {
+            "formationName": "Baccalauréat",
+            "formationDescription": "Baccalauréat option Physique au Groupe pédagogique alpha",
+            "formationImage": require('./images/alpha.png')
+        },
+        {
+            "formationName": "LST GI",
+            "formationDescription": "Licence en Sciences et Techniques en Génie informatique",
+            "formationImage": require('./images/fsts.png')
+        },
+        {
+            "formationName": "Master IMSC",
+            "formationDescription": "Master en Informatique et Modélisation des Systèmes Complexes",
+            "formationImage": require('./images/fsts.png')
+        }        
+    ]
+}
 export const certifications = [
     {
         'name': 'IBM Full Stack Software Developer',

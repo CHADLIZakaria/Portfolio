@@ -1,0 +1,27 @@
+{
+    "navbar": {
+        "home": "Acceuil",
+        "aboutMe": "À propos de moi",
+        "projects": "Projets",
+        "skills": "Compétences",
+        "certifications": "Certifications",
+        "formations": "Formations",
+        "contact": "Contact"
+    },
+    "aboutMe": {
+        "developper": "Développeur",
+        "description": "Je suis un développeur full stack avec une expertise dans les technologies Java, Angular, React et Flutter. Fort d'une expérience significative dans le développement d'applications web et mobiles, je suis capable de créer des solutions innovantes et performantes."
+    },
+    "contact": {
+        "title": "Contactez-moi",
+        "address": "Kénitra, Maroc",
+        "namePlaceholder": "Entrez votre nom",
+        "name": "Nom",
+        "emailPlaceholder": "Entrez votre email",
+        "email": "Email",
+        "subjectPlaceholder": "Entrez votre sujet",
+        "subject": "Sujet",
+        "messagePlaceholder": "Entrez votre message",
+        "message": "Message"
+    }   
+}

@@ -1,49 +1,168 @@
 .aboutMe {
-    background: linear-gradient(0deg, #9A9A9A, white);
     position: relative;
     margin-top: 72px;
+    min-height: calc(100vh - 72px);
+    padding: 10px 0;
+    .aboutMe-section {
+        width: 100%;
+        position: relative;
+        display: flex;
+        margin-top: 50px;
+        justify-content: center;        
+    }
+    .scroll-menu {
+        height: fit-content;
+        position: relative;
+        li:last-of-type .icon::after {
+            height: 0 !important;
+        }
+        li:has(~ .active)  .icon{
+            svg {
+                color: var(--main-color) !important;
+            }
+            &::after {
+                background-color: var(--main-color);
+            }
+        }
+        li {
+            padding: 15px 10px;
+            color: var(--main-color);
+            cursor: pointer;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            width: 190px;
+            transition: all .3s ease-in-out;
+            position: relative;
+            text-wrap: nowrap;
+            .icon {
+                position: relative;
+                &::before {
+                    content: "";
+                    width: 0px;
+                    height: 20px; /* Set a specific height */
+                    background-color: black; /* Ensure it's visible against the background */
+                    position: absolute;
+                    top: -6px;
+                    right: 17px;
+                    overflow: hidden;
+                }
+                &::after {
+                    content: "";
+                    width: 1px;
+                    height: 54px;
+                    background-color: white;
+                    position: absolute;
+                    left: 50%;
+                    right: 50%;
+                    top: 89%;
+                }
+            }
+            &.active {
+                span {
+                    visibility: visible;
+                }
+                .icon svg{
+                    color: var(--main-color)
+                }
+                &::before, &::after {
+                    background-color: var(--main-color);
+                }
+            }
+            .title {
+                display: flex;
+                background-color: var(--main-color);
+                color: white;
+                width: 100px;
+                padding: 10px 20px;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                position: relative;
+                border-radius: 3px;
+                font-weight: 600;
+                visibility: hidden;
+                &::before {
+                    content: "";
+                    width: 0px;
+                    height: 0px;
+                    border-top: 5px solid transparent;
+                    border-bottom: 5px solid transparent;
+                    border-left: 10px solid var(--main-color);
+                    right: -10px;
+                    position: absolute;
+                }
+            }
+            &:hover span {
+                visibility: visible;
+               & + .icon {
+                    color: var(--main-color);
+               }
+            }              
+            
+        }
+        svg {
+            color: white
+        }
+       
+    }
+    .aboutMe-container {
+        width: 50%;
+        margin: auto;
+    }
+    .me {
+        display: flex;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.4);
+        justify-content: center;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border: 1px solid #f1eeee;
+        border-radius: 6px;
+        padding: 20px;
+        .box {
+            flex: 1 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 1.1rem;
+            margin-top: 20px;
+            &:first-of-type {
+                flex-direction: row;
+                justify-content: space-between;
+                .header-image {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                }
+            }
+            img {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+        }
+    }
 }
-.aboutMe::before {
-    display: block;
-    position: absolute;
-    border-radius: 0% 0% 100% 100%;
-    width: 100%;
-    height: 6vh;
-    background-color: rgb(236, 236, 236);
-    left: 0;
-    top: 97%;
-}
-.aboutMe::after {
-    display: block;
-    position: absolute;
-    border-radius: 100%0%;
-    width: 50%;
-    height: 100vh;
-    background-color: white;
-    right: 0;
-    top: 90%;
-}
+    
 .aboutMe .container-fluid {
-    height: calc(100vh - 72px);
+    height: 100vh;
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutMe .container-fluid .about-header {
     display: flex;
     align-items: center;
-    padding: 0 30px 120px;
-}
-@media(max-width: 767px) {
-    .aboutMe {
-        margin-top: 112px;
-    }
-    .aboutMe .container-fluid{
-        position: relative;
-        height: calc(100vh - 112px);
-        flex-direction: column-reverse;
-    }
+    flex-direction: column;
 }
 .aboutMe .text {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
 @media(max-width: 991px) {
@@ -51,21 +170,12 @@
         text-align: center;
     }
 }
-.aboutMe .image {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    margin-top: 30px;
-}
-.aboutMe .text h1 {
+
+.aboutMe .text h3 {
     font-size: 5em;
     margin: 0;
     font-weight: bold;
-    width: fit-content;
-    border-right: 3px solid var(--main-color);
-    overflow: hidden;
-    animation: blink .7s infinite;
-    white-space: nowrap;
+    color: white;
 }
 .aboutMe .text h1.finished {
     border-right: none;
@@ -75,62 +185,114 @@
         font-size: 2.5em;
     }
 }
-.aboutMe .text p {
+.aboutMe .text .role {
     font-size: 2.5em;
     font-weight: bold;
     line-height: 1.5;
     margin: 5px 0 0;
-    overflow: hidden;
-    width: fit-content;
-    border-right: 3px solid var(--main-color);
-    animation: blink .5s infinite;
+    color: white;
+}
+.aboutMe .text .role > div {
+    display: inline-block;
+    margin-right: 10px;
 }
 @media(max-width: 991px) {
     .aboutMe .text p {
         font-size: 1em;
     }
 }
-@keyframes control-width {
-    from {
-        width: 0;
-    }
-    to {
-        width: 449px;
-    }
-}
-@keyframes blink {
-    from {
-        border-right-color: var(--main-color);
-    }
-    to {
-        border-right-color: transparent;
-    }
-}
-
 @media(max-width: 991px) {
     .aboutMe .text p {
         margin: 10px auto;
     }
 }
-.aboutMe .image img {
-    position: relative;
-    width: 100%;
-    animation: up-and-down 5s linear infinite;
-}
 
-.aboutMe .go-down {
-    color: var(--main-color);
+.go-down {
+    color: white;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     transition: var(--main-transition);
     z-index: 1;
     cursor: pointer;
+    background: transparent;
+    border: none;
 }
-.aboutMe .go-down {
+.go-down {
     animation: bouncing 1.5s infinite;
 }
-.aboutMe .go-down:hover {
+.go-down:hover {
     color: var(--main-color-alt);
+}
+
+
+.go-up {
+    color: white;
+    position: absolute;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: var(--main-transition);
+    z-index: 1;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    animation: bouncing 1.5s infinite;
+}
+.go-up:hover {
+    color: var(--main-color-alt);
+}
+
+
+@media(max-width: 767px) {
+    .aboutMe {
+        margin-top: 50px;
+        .aboutMe-section {
+            padding: 0;
+            margin: 0;
+            flex-direction: column-reverse;
+            padding-bottom: 30px;            
+            .scroll-menu {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                padding: 0 20px;
+                li {
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 9px;
+                    width: 85px;
+                    .title {
+                        padding: 5px 10px;
+                        width: 80px;
+                        &::before {
+                            top: 100%;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            border-top: 10px solid var(--main-color);
+                            border-bottom: 5px solid transparent;
+                            border-left: 5px solid transparent;
+                            border-right: 5px solid transparent;
+                        }
+                    }
+                    .icon::after {
+                        right: 0;
+                        left: 100%;
+                        top: 50%;
+                        bottom: 50%;
+                        width: 76px;
+                        height: 1px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+        }
+    }
+    .aboutMe .container-fluid{
+        position: relative;
+        height: calc(100vh - 112px);
+        flex-direction: column-reverse;
+    }
 }

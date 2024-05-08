@@ -1,83 +1,102 @@
-import React, { useEffect, useState } from 'react'
-import './AboutMe.scss' 
-import {faAngleDoubleDown} from '@fortawesome/fontawesome-free-solid'
-import myImage from '../../images/my_image.png'
+
+import { faCircle, faDotCircle } from '@fortawesome/fontawesome-free-regular'
+import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
+import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons/faAngleDoubleDown'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Link } from 'react-scroll'
+import { motion } from "framer-motion"
+import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
+import './AboutMe.scss'
+import AboutMeDescription from './AboutMeDescription/AboutMeDescription'
+import Certifications from './Certifications/Certifications'
+import Competance from './Competance/Competance'
+import Formation from './Formation/Formation'
+
+
 const AboutMe = () => {
+    const [t] = useTranslation("global");
+    const [page, setCurrentPage] = useState(0);
+    const [hoverIconIndex, setHoverIconIndex] = useState(null);
 
-    const [currentName, setCurrentName]=useState('')
-    const [currentDescription, setCurrentDescription]=useState('')
-    const [currentDescriptionPrefix, setCurrentDescriptionPrefix]=useState('')
-    
-    const [isDeletecurrentDescription, setIsDeleteCurrentDescription]=useState(false)
-    
-    const [showSubtitle1, setShowSubtitle1] = useState(true)
-    
-    let resultName='CHADLI Zakaria'
-    let resultCurrentDescriptionPrefix='Developper'
-    let resultCurrentDescription=['Full Stack', 'Java & Flutter']
+    const handlePrevPageChange = () => {
+        setCurrentPage(prev => Math.max(0, prev - 1));
+    };
 
-    const handleTyping = () => {
-        setCurrentName(resultName.substring(0, currentName.length + 1))
-    }
-    
-    useEffect(() => {
-        setTimeout(() => {
-            handleTyping()
-        }, 100)
-        setTimeout(() => {
-            if(resultName===currentName) {
-                setCurrentDescriptionPrefix(resultCurrentDescriptionPrefix.substring(0, currentDescriptionPrefix.length + 1))
-                if(resultCurrentDescriptionPrefix===currentDescriptionPrefix) {
-                    if(showSubtitle1) {
-                        if(isDeletecurrentDescription) {
-                            setCurrentDescription(resultCurrentDescription[0].substring(0, currentDescription.length - 1 ))
-                            if(currentDescription==='') {
-                                setIsDeleteCurrentDescription(false)
-                                setShowSubtitle1(false)
-                            } 
-                        }
-                        else {
-                            setCurrentDescription(resultCurrentDescription[0].substring(0, currentDescription.length + 1 ))
-                            if(resultCurrentDescription[0]===currentDescription) setIsDeleteCurrentDescription(true)
-                        }
-                    }
-                    else {
-                        if(isDeletecurrentDescription) {
-                            setCurrentDescription(resultCurrentDescription[1].substring(0, currentDescription.length - 1 ))
-                            if(currentDescription==='')  {
-                                setIsDeleteCurrentDescription(false)
-                                setShowSubtitle1(true)
-                            }
-                        }
-                        else {
-                            setCurrentDescription(resultCurrentDescription[1].substring(0, currentDescription.length + 1 ))
-                            if(resultCurrentDescription[1]===currentDescription) setIsDeleteCurrentDescription(true)
-                        }
-                    }
-                }
-            }
-        },200)
-    })
-    
+    const handleNextPageChange = () => {
+        setCurrentPage(prev => Math.min(3, prev + 1));
+    };
+
+    const handlePageChange = (index) => {
+        setCurrentPage(index);
+    };
+
+    const renderSwitch = (param) => {
+        switch (param) {
+            case 0: return <AboutMeDescription />;
+            case 1: return <Competance />;
+            case 2: return <Certifications />;
+            case 3: return <Formation />;
+            default: return 'Unknown section';
+        }
+    };
+
+    const renderTitle = (param) => {
+        switch (param) {
+            case 0: return t("navbar.aboutMe");
+            case 1: return t("navbar.skills");
+            case 2: return t("navbar.certifications");
+            case 3: return  t("navbar.formations");
+            default: return 'Unknown title';
+        }
+    };
+
+    const handleMouseEnter = (index) => () => {
+        setHoverIconIndex(index);
+    };
+
+    const handleMouseLeave = () => {
+        setHoverIconIndex(null);
+    };
 
     return (
-        <section className="aboutMe" id="aboutMe">
-            <div className="container-fluid">
-                <div className="text">
-                    <h1 className={`${resultName===currentName && 'finished'}`}>{currentName}</h1>
-                    <p>{currentDescriptionPrefix} {currentDescription}</p>
-                </div>
-                <div className="image">
-                    <img src={myImage} alt="" />
-                </div>
+        <div className='aboutMe'>
+            <h3 className="main-title">
+                {renderTitle(page)}
+            </h3>
+            {page !== 0 &&
+                <button className='go-up' onClick={handlePrevPageChange} aria-label="Go up">
+                    <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+                </button>
+            }                
+            <div className='aboutMe-section'>
+                {renderSwitch(page)}
+                <motion.ul 
+                        animate={{y: 0}}
+                        initial={{y:-100}} 
+                        transition={{duration:1}}  className="scroll-menu">
+                        {[t('navbar.aboutMe'),t('navbar.skills'), t('navbar.certifications'),  t('navbar.formations')].map((title, index) => (
+                        <li key={title}
+                            onMouseEnter={handleMouseEnter(index)}
+                            onMouseLeave={handleMouseLeave}
+                            onClick={()=> handlePageChange(index)}
+                            className={page === index ? 'active' : undefined}>
+                            <span className="title">{title}</span>
+                            <span className='icon'>
+                                <FontAwesomeIcon 
+                                    icon={page === index ? faDotCircle : (hoverIconIndex === index ? faDotCircle : faCircle)}                                
+                                />
+                            </span>
+                        </li>
+                    ))}
+                </motion.ul>
             </div>
-            <Link to="project" className="go-down">
-                <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
-            </Link>
-        </section>
-    )
-}
+            {page < 3 &&
+                <button className='go-down' onClick={handleNextPageChange} aria-label="Go down">
+                    <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
+                </button>
+            }
+        </div>
+    );
+};
 
-export default AboutMe
+export default AboutMe;
