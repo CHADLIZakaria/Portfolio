@@ -19,7 +19,7 @@ const Carousel = ({imageData, onClose}) => {
             <div className='carousel-inner'>
                 {imageData.map((screen, index) => (
                     <div key={index} className={`carousel-item ${index === activeIndex ? 'active' : ''}`} >
-                        <img src={screen} />
+                        <img src={screen} alt={`image_${index}`} />
                     </div>
                 ))}
             </div>
