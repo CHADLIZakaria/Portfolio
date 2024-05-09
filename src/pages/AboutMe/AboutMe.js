@@ -7,10 +7,10 @@ import { motion } from "framer-motion"
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './AboutMe.scss'
-import AboutMeDescription from './AboutMeDescription/AboutMeDescription'
-import Certifications from './Certifications/Certifications'
-import Competance from './Competance/Competance'
-import Formation from './Formation/Formation'
+import AboutMeDescription from '../../components/AboutMeDescription/AboutMeDescription'
+import Competance from '../../components/Competance/Competance'
+import Certifications from '../../components/Certifications/Certifications'
+import Formation from '../../components/Formation/Formation'
 
 
 const AboutMe = () => {
@@ -60,14 +60,14 @@ const AboutMe = () => {
 
     return (
         <div className='aboutMe'>
-            <h3 className="main-title">
-                {renderTitle(page)}
-            </h3>
             {page !== 0 &&
                 <button className='go-up' onClick={handlePrevPageChange} aria-label="Go up">
                     <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
                 </button>
             }                
+            <h3 className="main-title">
+                {renderTitle(page)}
+            </h3>
             <div className='aboutMe-section'>
                 {renderSwitch(page)}
                 <motion.ul 

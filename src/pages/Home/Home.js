@@ -21,7 +21,7 @@ const Home = () => {
   }, [controls]);
 
     return (
-        <section className="home" id="home">
+        <section className="home wrapper-body" id="home">
             <div className="container-fluid">
                 <div className='about-header'>
                     <motion.div 

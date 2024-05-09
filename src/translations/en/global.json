@@ -18,10 +18,10 @@
         "namePlaceholder": "Enter your name",
         "name": "Name",
         "emailPlaceholder": "Enter your email",
-        "email": "email",
+        "email": "Email",
         "subjectPlaceholder": "Enter your subject",
-        "subject": "subject",
+        "subject": "Subject",
         "messagePlaceholder": "Enter your message",
-        "message": "message"
+        "message": "Message"
     }
 }

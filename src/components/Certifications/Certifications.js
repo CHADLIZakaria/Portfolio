@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from 'react';
-import { certifications } from '../../../data';
+import { certifications } from '../../data';
 import './Certifications.scss';
 
 const Certifications = () => {

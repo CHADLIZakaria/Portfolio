@@ -145,6 +145,30 @@
         }
     }
 }
+
+@media (min-width:768px) and(max-width: 1200px) {
+    .projects .container {
+        width: 900px;
+        .project-description {
+            line-height: 1;
+            .description {
+                .title {
+                    margin: 5px 0;
+                }
+                .description {
+                    line-height: 1.1;
+                }
+            }
+            .technologies {
+                .technologies-title {
+                    margin: 5px 0;
+                }
+            }
+        }
+    }
+
+}
+
 @media(max-width: 767px) {
     .projects .container {
         width: 80%;
@@ -156,17 +180,17 @@
             .project-description {
                 .description {
                     margin: 5px 0;
-                    line-height: 1.1;
+                    line-height: 1;
                     h4 {
                         margin: 0;
-                        font-size: 1.2rem;
+                        font-size: 1rem;
                     }
                 }
                 .technologies {
                     margin-bottom: 10px;
                     .technologies-title {
                         margin: 0 0 10px;
-                        font-size: 1rem;
+                        font-size: 0.9rem;
                     }
                     .technologies-data {
                         .technologie {

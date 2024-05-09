@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from 'react';
-import { competances } from '../../../data';
+import { competances } from '../../data';
 import './Competance.scss';
 
 const Competance = () => {

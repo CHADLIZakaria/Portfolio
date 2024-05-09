@@ -41,9 +41,8 @@ ul {
 @media(max-width: 767px) {
   .wrapper-body {
     margin-top: 50px;
-    min-height: calc(100vh - 50px);
-    height: 100%;
-    margin-bottom: 20px;
+    min-height: calc(100vh - 70px);
+    margin-bottom: 50px;
   }
 }
 

@@ -3,11 +3,12 @@
     margin-top: 72px;
     min-height: calc(100vh - 72px);
     padding: 10px 0;
+    
     .aboutMe-section {
         width: 100%;
         position: relative;
         display: flex;
-        margin-top: 50px;
+        margin: 50px 0;       
         justify-content: center;        
     }
     .scroll-menu {
@@ -40,8 +41,8 @@
                 &::before {
                     content: "";
                     width: 0px;
-                    height: 20px; /* Set a specific height */
-                    background-color: black; /* Ensure it's visible against the background */
+                    height: 20px;
+                    background-color: black;
                     position: absolute;
                     top: -6px;
                     right: 17px;
@@ -210,8 +211,8 @@
 .go-down {
     color: white;
     position: absolute;
-    bottom: 20px;
     left: 50%;
+    bottom: 20px;
     transform: translateX(-50%);
     transition: var(--main-transition);
     z-index: 1;
@@ -229,12 +230,10 @@
 
 .go-up {
     color: white;
-    position: absolute;
-    top: 3px;
-    left: 50%;
+    margin: auto;
+    display: block;
     transform: translateX(-50%);
     transition: var(--main-transition);
-    z-index: 1;
     cursor: pointer;
     background: transparent;
     border: none;

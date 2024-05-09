@@ -15,8 +15,6 @@ function BackgroundImage({ src }) {
   return (
     <div
       style={{
-        width: '100%',
-        height: '500px',
         background: backgroundLoaded ? `url(${src}) no-repeat center/cover` : 'red',
         transition: 'all 0.5s ease-out',
         opacity: backgroundLoaded ? 1 : 0,

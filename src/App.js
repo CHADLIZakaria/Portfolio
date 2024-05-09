@@ -1,12 +1,12 @@
+import 'font-awesome/css/font-awesome.min.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import 'font-awesome/css/font-awesome.min.css';
 import ParticlesComponent from './components/Particles/particles';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import ContactMe from './components/ContactMe/ContactMe';
-import Home from './components/Home/Home';
-import AboutMe from './components/AboutMe/AboutMe';
-import Projects from './components/Project/Project'
+import ContactMe from './pages/ContactMe/ContactMe';
+import AboutMe from './pages/AboutMe/AboutMe';
+import Home from './pages/Home/Home';
+import Projects from './pages/Project/Project';
 
 function App() {
   return (

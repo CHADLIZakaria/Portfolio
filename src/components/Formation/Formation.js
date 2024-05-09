@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from 'react';
-import { useLanguage } from '../../../contexts/LanguageContext';
-import { formations } from '../../../data';
+import { useLanguage } from '../../contexts/LanguageContext';
+import { formations } from '../../data';
 import './Formation.scss';
 
 const Formation = () => {

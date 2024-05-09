@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from "framer-motion"
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import myImage from '../../../images/CHADLIZakaria.png'
+import myImage from '../../images/CHADLIZakaria.png'
 import './AboutMeDescription.scss'
 
 const AboutMeDescription = () => {

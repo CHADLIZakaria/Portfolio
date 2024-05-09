@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from "framer-motion"
 import React, { useCallback, useEffect, useState } from 'react'
 import { projectsData } from '../../data'
-import Carousel from '../Carousel/Carousel'
+import Carousel from '../../components/Carousel/Carousel'
 import './Project.scss'
 import { useLanguage } from '../../contexts/LanguageContext'
 
