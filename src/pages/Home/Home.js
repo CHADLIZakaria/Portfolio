@@ -63,7 +63,7 @@ const Home = () => {
                         </motion.div>
                         <div className='cv'>  
                             <motion.a
-                                href="/Resume_CHADLI_Zakaria.pdf" download
+                                href="/Portfolio/Resume_CHADLI_Zakaria.pdf" download
                                 animate={controls}
                                 initial={{x:-100}}
                                >
