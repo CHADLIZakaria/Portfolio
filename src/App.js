@@ -1,5 +1,5 @@
 import 'font-awesome/css/font-awesome.min.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import ParticlesComponent from './components/Particles/particles';
@@ -10,7 +10,7 @@ import Projects from './pages/Project/Project';
 
 function App() {
   return (
-      <BrowserRouter>
+      <Router basename='/Portfolio' >
         <>
           <ParticlesComponent></ParticlesComponent>
           <Navbar></Navbar>
@@ -21,7 +21,7 @@ function App() {
               <Route path="/contact" element={<ContactMe />} />      
           </Routes>
         </>
-      </BrowserRouter>
+      </Router>
   );
 }
 
