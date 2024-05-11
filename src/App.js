@@ -6,7 +6,7 @@ import ParticlesComponent from './components/Particles/particles';
 import ContactMe from './pages/ContactMe/ContactMe';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Home from './pages/Home/Home';
-import Projects from './pages/Project/Project';
+import Projects from './pages/Projects/Projects';
 
 function App() {
   return (

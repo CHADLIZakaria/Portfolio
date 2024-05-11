@@ -22,7 +22,7 @@ const ParticlesComponent = () => {
     return (
          init && 
          <>
-            <BackgroundImage src={backgroundImage} />
+            <BackgroundImage src={backgroundImage} width='100%' />
             <div className="particles-container"><Particles
                 id="tsparticles"
                 options={{

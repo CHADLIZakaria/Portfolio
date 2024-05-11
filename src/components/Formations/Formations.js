@@ -2,9 +2,9 @@ import { motion } from "framer-motion";
 import React from 'react';
 import { useLanguage } from '../../contexts/LanguageContext';
 import { formations } from '../../data';
-import './Formation.scss';
+import './Formations.scss';
 
-const Formation = () => {
+const Formations = () => {
     const { language } = useLanguage();
     return (
         <section className="formations" id="formation">
@@ -29,4 +29,4 @@ const Formation = () => {
     )
 }
 
-export default Formation
+export default Formations

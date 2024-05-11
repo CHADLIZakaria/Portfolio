@@ -8,9 +8,9 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import './AboutMe.scss'
 import AboutMeDescription from '../../components/AboutMeDescription/AboutMeDescription'
-import Competance from '../../components/Competance/Competance'
+import Competance from '../../components/Skills/Skills'
 import Certifications from '../../components/Certifications/Certifications'
-import Formation from '../../components/Formation/Formation'
+import Formation from '../../components/Formations/Formations'
 
 
 const AboutMe = () => {

@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import React from 'react';
 import { competances } from '../../data';
-import './Competance.scss';
+import './Skills.scss';
 
-const Competance = () => {
+const Skills = () => {
     return (
         <section className="competances" id="competance">
             <div className="container">
@@ -42,4 +42,4 @@ const Competance = () => {
     )
 }
 
-export default Competance
+export default Skills

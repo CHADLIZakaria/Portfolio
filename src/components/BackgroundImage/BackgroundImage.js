@@ -1,31 +1,33 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import './BackgroundImage.scss'
 
 function BackgroundImage({ src }) {
-  const [backgroundLoaded, setBackgroundLoaded] = useState(false);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = src;
-    img.onload = () => {
-      setBackgroundLoaded(true);
-    };
-  }, [src]);
-
-
-  return (
-    <div
-      style={{
-        background: backgroundLoaded ? `url(${src}) no-repeat center/cover` : 'red',
-        transition: 'all 0.5s ease-out',
-        opacity: backgroundLoaded ? 1 : 0,
-        position: 'fixed',
-        height: '100vh',
-        width: '100%'
-      }}
-    >
-      {!backgroundLoaded && <div>Loading...</div>}
-    </div>
-  );
-}
+  const [loading, setLoading] = useState(true);
+    return (
+    <div style={
+        {          
+          width: "100%",
+          position: 'fixed',
+          height: '100vh',
+        }
+    } >
+    <img 
+      src={src} 
+      style={
+          {
+            display: loading?"none":"block",
+            width:"100%",
+            height: "100%",
+            animation: "fadeIn 0.5s",
+        }
+      } 
+      onLoad={(e)=>{setLoading(false)}} 
+      alt="background" />
+    {loading &&
+      <div className="loader-container">
+        <div className='loader'></div>
+      </div>
+    }
+</div>)}
 
 export default BackgroundImage;

@@ -1,55 +1,55 @@
 
 const html5={
     'title':'HTML5',
-    'image': require('./images/html5.png'),
+    'image': require('./images/skills/html5.png'),
 }
 const css3={
     'title':'CSS3',
-    'image': require('./images/css3.png'),
+    'image': require('./images/skills/css3.png'),
 }
 const js={
     'title':'Javascript',
-    'image':  require('./images/js.png')
+    'image':  require('./images/skills/js.png')
 }
 const react={
     'title':'React',
-    'image': require('./images/react.png'),
+    'image': require('./images/skills/react.png'),
 }
 const flutter={
     'title':'Flutter',
-    'image': require('./images/flutter.png'),
+    'image': require('./images/skills/flutter.png'),
 }
 const bootstrap={  
     'title':'Bootstrap4',
-    'image':  require('./images/bootstrap.png')
+    'image':  require('./images/skills/bootstrap.png')
 }
 const java={  
     'title': 'Java',
-    'image': require('./images/java.png'),
+    'image': require('./images/skills/java.png'),
 }
 const python={  
     'title': 'Python',
-    'image': require('./images/python.png'),
+    'image': require('./images/skills/python.png'),
 }
 const php={  
     'title': 'PHP',
-    'image':  require('./images/php.png'),
+    'image':  require('./images/skills/php.png'),
 }
 const mysql={  
     'title': 'MySQL',
-    'image': require('./images/mysql.png'),
+    'image': require('./images/skills/mysql.png'),
 }
 const postgresql={
     'title': 'PostgreSQL',
-    'image': require('./images/postgresql.png'),
+    'image': require('./images/skills/postgresql.png'),
 }
 const sqlserver={
     'title': 'Sql Server',
-    'image':  require('./images/sql-server.png'),
+    'image':  require('./images/skills/sql-server.png'),
 }
 const angular={
     'title': 'Angular',
-    'image':  require('./images/angular.png'),
+    'image':  require('./images/skills/angular.png'),
 }
 
 
@@ -59,9 +59,9 @@ export const projectsData = {
             "title": "Portfolio",
             "description": 'Portfolio is website with multilingual capabilities, allowing visitors to explore my projects and learn about me in multiple languages. With customizable sections for showcasing my work and background, it delivers a tailored and informative experience.',
             "category": "web",
-            "image": require('./images/projects/weather/demo-weather1.png'),
-            "github": 'https://github.com/CHADLIZakaria/Movie',
-            "website": 'https://movie05.netlify.app/',
+            "image": require('./images/projects/portfolio.png'),
+            "github": 'https://github.com/CHADLIZakaria/Portfolio',
+            "website": 'https://chadlizakaria.github.io/Portfolio/',
             "technologies": [
                 html5,
                 css3,

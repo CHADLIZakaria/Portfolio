@@ -7,11 +7,11 @@ import { motion } from "framer-motion"
 import React, { useCallback, useEffect, useState } from 'react'
 import { projectsData } from '../../data'
 import Carousel from '../../components/Carousel/Carousel'
-import './Project.scss'
+import './Projects.scss'
 import { useLanguage } from '../../contexts/LanguageContext'
 
 
-const Project = () => {
+const Projects = () => {
     const [projects, setProjects] = useState([])
     const [classActive, setClassActive] = useState("all")
     const [currentCarousel, setCurrentCarousel] = useState({showCarousel: false, currentIndexCarousel: 0})
@@ -146,4 +146,4 @@ const Project = () => {
     )
 }
 
-export default Project
+export default Projects
