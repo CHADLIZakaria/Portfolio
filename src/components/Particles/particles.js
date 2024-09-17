@@ -3,14 +3,9 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
 
 import './Particles.scss';
-import BackgroundImage from "../BackgroundImage/BackgroundImage";
-
-import backgroundImage from '../../images/background/home-background.jpg';
 
 const ParticlesComponent = () => {
-
-    const [ init, setInit ] = useState(false);
-    
+    const [ init, setInit ] = useState(false);    
     useEffect(() => {
         initParticlesEngine(async (engine) => {        
             await loadSlim(engine);
@@ -21,102 +16,118 @@ const ParticlesComponent = () => {
 
     return (
          init && 
-         <>
-            <BackgroundImage src={backgroundImage} width='100%' />
-            <div className="particles-container"><Particles
-                id="tsparticles"
-                options={{
-                    fpsLimit: 120,
-                    interactivity: {
-                    events: {
-                        onHover: {
+        <>
+            <div className="particles-container">
+                <Particles
+                    id="tsparticles"
+                    options={{
+                        interactivity: {
+                        detectsOn: "canvas",
+                        events: {
+                            onHover: {
+                                enable: true,
+                                mode: "bubble",
+                            },
+                            onClick: {
+                                enable: true,
+                                mode: "push",
+                            },
+                            resize: true,
+                        },
+                        modes: {
+                            grab: {
+                            distance: 400,
+                            line_linked: {
+                                opacity: 1,
+                            },
+                            },
+                            bubble: {
+                                distance: 83.91608391608392,
+                                size: 1,
+                                duration: 3,
+                                opacity: 1,
+                                speed: 3,
+                            },
+                            repulse: {
+                                distance: 200,
+                                duration: 0.4,
+                            },
+                            push: {
+                                quantity: 4,
+                            },
+                            remove: {
+                                quantity: 2,
+                            },
+                        },
+                        },
+                        particles: {
+                        number: {
+                            value: 700,
+                            density: {
                             enable: true,
-                            mode: "bubble",
+                            area: 789.1476416322727,
+                            },
                         },
-                        resize: true,
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
+                        color: {
+                            value: "#ffffff",
                         },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
-                        },
-                        bubble: {
-                            color: "#0077b6",
-                            distance: 100,
-                            duration: 2,
-                            opacity: 1,
-                            size: 10,
-                            speed: 3
-                        }
-                    },
-                    },
-                    particles: {
-                    color: {
-                        value: "#ffffff",
-                    },
-                    links: {
-                        color: "#0077b6",
-                        distance: 150,
-                        enable: true,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 2,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 800,
-                        },
-                        value: 20,
-                    },
-                    opacity: {
-                        value: 0.5,
-                        random: false,
-                        anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: true
-                        }
-                    },
-                    shape: {
-                        type: "circle",
-                        stroke: {
+                        shape: {
+                            type: "circle",
+                            stroke: {
                             width: 0,
-                            color: "#000000"
+                            color: "#000000",
+                            },
+                            polygon: {
+                            nb_sides: 5,
+                            },
                         },
-                        polygon: {
-                            nb_sides: 3
-                        }
-                    },
-                    line_linked: {
-                        enable: true,
-                        distance: 150,
-                        color: "#ffffff",
-                        opacity: 0.4,
-                        width: 1
-                    },
-                    size: {
-                        value: { min: 1, max: 5 },
-                    },
-                    },
-                    detectRetina: true,
-                }}
-            /></div>
-         </>
-         
+                        opacity: {
+                            value: 0.48927153781200905,
+                            random: false,
+                            animation: {
+                            enable: true,
+                            speed: 0.2,
+                            minimumValue: 0,
+                            sync: false,
+                            },
+                        },
+                        size: {
+                            value: 2,
+                            random: true,
+                            animation: {
+                            enable: true,
+                            speed: 2,
+                            minimumValue: 0,
+                            sync: false,
+                            },
+                        },
+                        links: {
+                            enable: false,
+                            distance: 150,
+                            color: "#ffffff",
+                            opacity: 0.4,
+                            width: 1,
+                        },
+                        move: {
+                            enable: true,
+                            speed: 0.2,
+                            direction: "none",
+                            random: true,
+                            straight: false,
+                            outMode: "out",
+                            bounce: false,
+                            attract: {
+                            enable: false,
+                            rotateX: 600,
+                            rotateY: 1200,
+                            },
+                        },
+                        },
+                        detectRetina: true,
+                    }}
+                />
+            </div>
+        </>
     );
 };
 

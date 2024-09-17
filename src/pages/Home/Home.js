@@ -8,17 +8,16 @@ import myImage from '../../images/me.png'
 import './Home.scss'
 
 const Home = () => {
-  const [t] = useTranslation("global");
-  const controls = useAnimation();
-
+    const [t] = useTranslation("global");
+    const controls = useAnimation();
     const startLoop = async () => {
-       await animate('.cv a', {x: 0}, {duration: 1});  
-       animate('.cv a', {scale: 1.1}, {repeat: Infinity, duration:  1.5});  
+        await animate('.cv a', {x: 0}, {duration: 1});  
+        animate('.cv a', {scale: 1.1}, {repeat: Infinity, duration:  1.5});  
     };
 
-  useEffect(() => {
-    startLoop();
-  }, [controls]);
+    useEffect(() => {
+        startLoop();
+    }, [controls]);
 
     return (
         <section className="home wrapper-body" id="home">
@@ -63,7 +62,8 @@ const Home = () => {
                         </motion.div>
                         <div className='cv'>  
                             <motion.a
-                                href="./Resume_CHADLI_Zakaria.pdf" download
+                                href="https://drive.google.com/file/d/19UwRf2z9EfFKhrF12YVl-ZIsvj-71aD3/view"
+                                target="_blank"
                                 animate={controls}
                                 initial={{x:-100}}
                                >
