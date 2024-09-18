@@ -66,7 +66,7 @@ const Home = () => {
                                 target="_blank"
                                 animate={controls}
                                 initial={{x:-100}}
-                               >
+                                >
                                 RESUME
                                 <FontAwesomeIcon icon={faFileArrowDown} />
                             </motion.a>
