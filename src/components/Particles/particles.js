@@ -61,67 +61,67 @@ const ParticlesComponent = () => {
                         },
                         },
                         particles: {
-                        number: {
-                            value: 700,
-                            density: {
-                            enable: true,
-                            area: 789.1476416322727,
+                            number: {
+                                value: 300,
+                                density: {
+                                    enable: true,
+                                    area: 1000,
+                                },
                             },
-                        },
-                        color: {
-                            value: "#ffffff",
-                        },
-                        shape: {
-                            type: "circle",
-                            stroke: {
-                            width: 0,
-                            color: "#000000",
+                            color: {
+                                value: "#ffffff",
                             },
-                            polygon: {
-                            nb_sides: 5,
+                            shape: {
+                                type: "circle",
+                                stroke: {
+                                width: 0,
+                                color: "#000000",
+                                },
+                                polygon: {
+                                nb_sides: 5,
+                                },
                             },
-                        },
-                        opacity: {
-                            value: 0.48927153781200905,
-                            random: false,
-                            animation: {
-                            enable: true,
-                            speed: 0.2,
-                            minimumValue: 0,
-                            sync: false,
+                            opacity: {
+                                value: 0.48927153781200905,
+                                random: false,
+                                animation: {
+                                    enable: false,
+                                    speed: 0.2,
+                                    minimumValue: 0,
+                                    sync: false,
+                                },
                             },
-                        },
-                        size: {
-                            value: 2,
-                            random: true,
-                            animation: {
-                            enable: true,
-                            speed: 2,
-                            minimumValue: 0,
-                            sync: false,
+                            size: {
+                                value: 2,
+                                random: true,
+                                animation: {
+                                    enable: true,
+                                    speed: 2,
+                                    minimumValue: 0,
+                                    sync: false,
+                                },
                             },
-                        },
-                        links: {
-                            enable: false,
-                            distance: 150,
-                            color: "#ffffff",
-                            opacity: 0.4,
-                            width: 1,
-                        },
-                        move: {
-                            enable: true,
-                            speed: 0.2,
-                            direction: "none",
-                            random: true,
-                            straight: false,
-                            outMode: "out",
-                            bounce: false,
-                            attract: {
-                            enable: false,
-                            rotateX: 600,
-                            rotateY: 1200,
+                            links: {
+                                enable: false,
+                                distance: 150,
+                                color: "#ffffff",
+                                opacity: 0.4,
+                                width: 1,
                             },
-                        },
+                            move: {
+                                enable: true,
+                                speed: 0.2,
+                                direction: "none",
+                                random: true,
+                                straight: false,
+                                outMode: "out",
+                                bounce: false,
+                                attract: {
+                                enable: false,
+                                rotateX: 600,
+                                rotateY: 1200,
+                                },
+                            },
                         },
                         detectRetina: true,
                     }}
