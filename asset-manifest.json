@@ -1,14 +1,11 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.a740dd18.css",
-    "main.js": "/Portfolio/static/js/main.b906e5ba.js",
+    "main.css": "/Portfolio/static/css/main.f62b4037.css",
+    "main.js": "/Portfolio/static/js/main.81bbdfb2.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/demo-weather1.png": "/Portfolio/static/media/demo-weather1.632fa119096b28a448ef.png",
     "static/media/frontend-background.png": "/Portfolio/static/media/frontend-background.6ece0ca3d16717607015.png",
-    "static/media/movie_app.png": "/Portfolio/static/media/movie_app.aa8b4f1d59860c05c497.png",
-    "static/media/home_movie.png": "/Portfolio/static/media/home_movie.7a5c4c9fa11a08a6d237.png",
     "static/media/me.png": "/Portfolio/static/media/me.8f4bcd0f7349c9f20e34.png",
-    "static/media/movie.png": "/Portfolio/static/media/movie.c0514e0906433d08a270.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/CHADLIZakaria.png": "/Portfolio/static/media/CHADLIZakaria.d94f60fade55ee403d3b.png",
     "static/media/portfolio.png": "/Portfolio/static/media/portfolio.a21a3a05728f5aa45720.png",
@@ -33,12 +30,12 @@
     "static/media/css3.png": "/Portfolio/static/media/css3.4a6549b8c2b4cda8bb88.png",
     "static/media/js.png": "/Portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/Portfolio/index.html",
-    "main.a740dd18.css.map": "/Portfolio/static/css/main.a740dd18.css.map",
-    "main.b906e5ba.js.map": "/Portfolio/static/js/main.b906e5ba.js.map",
+    "main.f62b4037.css.map": "/Portfolio/static/css/main.f62b4037.css.map",
+    "main.81bbdfb2.js.map": "/Portfolio/static/js/main.81bbdfb2.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a740dd18.css",
-    "static/js/main.b906e5ba.js"
+    "static/css/main.f62b4037.css",
+    "static/js/main.81bbdfb2.js"
   ]
 }
