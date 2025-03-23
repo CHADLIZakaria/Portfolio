@@ -32,10 +32,10 @@ ul {
   margin-right: auto;
 }
 .wrapper-body {
-  padding: 10px 0;
+  padding: 10px 0 30px;
   margin-top: 72px;
   position: relative;
-  height: calc(100vh - 72px);
+  min-height: calc(100vh - 72px);
 }
 
 @media(max-width: 767px) {
@@ -45,7 +45,6 @@ ul {
     margin-bottom: 50px;
   }
 }
-
 
 .main-title {
   font-size: 28px;

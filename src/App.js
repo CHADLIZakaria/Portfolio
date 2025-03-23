@@ -13,6 +13,7 @@ function App() {
       <Router basename='/Portfolio' >
         <>
           <ParticlesComponent></ParticlesComponent>
+          
           <Navbar></Navbar>
           <Routes>
               <Route exact path="/" element={<Home />} />

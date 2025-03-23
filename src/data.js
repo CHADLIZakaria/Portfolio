@@ -87,24 +87,6 @@ export const projectsData = {
                 require('./images/projects/weather/demo-weather1.png'),
                 require('./images/projects/weather/demo-weather1.png'),
             ]
-        },
-        {
-            "title": "Movies",
-            "description": 'Explore trending movies and series on our website, with convenient category filters for easy navigation.',
-            "category": "web",
-            "image": require('./images/movie_app.png'),
-            "github": 'https://github.com/CHADLIZakaria/Movie',
-            "website": 'https://movie05.netlify.app/',
-            "technologies": [
-                html5,
-                css3,
-                js,
-                react
-            ],
-            screenshoot: [
-                require('./images/home_movie.png'),
-                require('./images/movie.png')
-            ]
         },       
     ],
     "fr":  [
@@ -140,25 +122,7 @@ export const projectsData = {
                 require('./images/projects/weather/demo-weather1.png'),
                 require('./images/projects/weather/demo-weather1.png'),
             ]
-        },
-        {
-            "title": "Movies",
-            "description": 'Découvrez les films et séries populaires sur notre site web, avec des filtres de catégories pratiques pour une navigation facile.',
-            "category": "web",
-            "image": require('./images/movie_app.png'),
-            "github": 'https://github.com/CHADLIZakaria/Movie',
-            "website": 'https://movie05.netlify.app/',
-            "technologies": [
-                html5,
-                css3,
-                js,
-                react
-            ],
-            screenshoot: [
-                require('./images/home_movie.png'),
-                require('./images/movie.png')
-            ]
-        },       
+        },    
     ]
 }
 

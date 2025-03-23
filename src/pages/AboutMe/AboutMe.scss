@@ -3,13 +3,10 @@
     margin-top: 72px;
     min-height: calc(100vh - 72px);
     padding: 10px 0;
-    
+    display: flex;
     .aboutMe-section {
         width: 100%;
         position: relative;
-        display: flex;
-        margin: 50px 0;       
-        justify-content: center;        
     }
     .scroll-menu {
         height: fit-content;

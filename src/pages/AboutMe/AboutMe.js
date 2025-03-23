@@ -1,4 +1,3 @@
-
 import { faCircle, faDotCircle } from '@fortawesome/fontawesome-free-regular'
 import { faAngleDoubleUp } from '@fortawesome/free-solid-svg-icons'
 import { faAngleDoubleDown } from '@fortawesome/free-solid-svg-icons/faAngleDoubleDown'
@@ -60,41 +59,41 @@ const AboutMe = () => {
 
     return (
         <div className='aboutMe'>
-            {page !== 0 &&
-                <button className='go-up' onClick={handlePrevPageChange} aria-label="Go up">
-                    <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
-                </button>
-            }                
-            <h3 className="main-title">
-                {renderTitle(page)}
-            </h3>
             <div className='aboutMe-section'>
+                {  page !== 0 &&
+                    <button className='go-up' onClick={handlePrevPageChange} aria-label="Go up">
+                        <FontAwesomeIcon icon={faAngleDoubleUp} size="2x" />
+                    </button>
+                }
+                 <h3 className="main-title">
+                    {renderTitle(page)}
+                 </h3>
                 {renderSwitch(page)}
-                <motion.ul 
-                        animate={{y: 0}}
-                        initial={{y:-100}} 
-                        transition={{duration:1}}  className="scroll-menu">
-                        {[t('navbar.aboutMe'),t('navbar.skills'), t('navbar.certifications'),  t('navbar.formations')].map((title, index) => (
-                        <li key={title}
-                            onMouseEnter={handleMouseEnter(index)}
-                            onMouseLeave={handleMouseLeave}
-                            onClick={()=> handlePageChange(index)}
-                            className={page === index ? 'active' : undefined}>
-                            <span className="title">{title}</span>
-                            <span className='icon'>
-                                <FontAwesomeIcon 
-                                    icon={page === index ? faDotCircle : (hoverIconIndex === index ? faDotCircle : faCircle)}                                
-                                />
-                            </span>
-                        </li>
-                    ))}
-                </motion.ul>
+                {page < 3 &&
+                    <button className='go-down' onClick={handleNextPageChange} aria-label="Go down">
+                        <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
+                    </button>
+                }
             </div>
-            {page < 3 &&
-                <button className='go-down' onClick={handleNextPageChange} aria-label="Go down">
-                    <FontAwesomeIcon icon={faAngleDoubleDown} size="2x" />
-                </button>
-            }
+            <motion.ul
+                animate={{y: 0}}
+                initial={{y:-100}}
+                transition={{duration:1}}  className="scroll-menu">
+                {[t('navbar.aboutMe'),t('navbar.skills'), t('navbar.certifications'),  t('navbar.formations')].map((title, index) => (
+                    <li key={title}
+                        onMouseEnter={handleMouseEnter(index)}
+                        onMouseLeave={handleMouseLeave}
+                        onClick={()=> handlePageChange(index)}
+                        className={page === index ? 'active' : undefined}>
+                        <span className="title">{title}</span>
+                        <span className='icon'>
+                            <FontAwesomeIcon
+                                icon={page === index ? faDotCircle : (hoverIconIndex === index ? faDotCircle : faCircle)}
+                            />
+                        </span>
+                    </li>
+                ))}
+            </motion.ul>
         </div>
     );
 };
