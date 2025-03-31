@@ -20,7 +20,11 @@ const flutter={
     'image': require('./images/skills/flutter.png'),
 }
 const bootstrap={  
-    'title':'Bootstrap4',
+    'title':'Bootstrap5',
+    'image':  require('./images/skills/bootstrap.png')
+}
+const bootstrapIcons={  
+    'title':'Bootstrap Icons',
     'image':  require('./images/skills/bootstrap.png')
 }
 const java={  
@@ -67,25 +71,31 @@ export const projectsData = {
                 css3,
                 js,
                 react
-            ],
-            screenshoot: [
-                require('./images/projects/weather/demo-weather1.png'),
-                require('./images/projects/weather/demo-weather1.png'),
             ]
         },
         {
-            "title": "Mobile Weather App",
-            "description": 'Weather is a mobile weather app offering daily and hourly forecasts. With a favorites feature, users can save preferred locations for quick access. The app also provides historical weather data and supports multiple languages.',
+            "title": "WeatherZ",
+            "description": 'WeatherZ is a mobile weather app offering daily and hourly forecasts. With a favorites feature, users can save preferred locations for quick access. The app also provides historical weather data and supports multiple languages.',
             "category": "mobile",
             "image": require('./images/projects/weather/demo-weather1.png'),
             "github": 'https://github.com/CHADLIZakaria/Movie',
-            "website": 'https://movie05.netlify.app/',
+            "website": 'https://play.google.com/store/apps/details?id=com.zchadli.weather',
             "technologies": [
                 flutter,
-            ],
-            screenshoot: [
-                require('./images/projects/weather/demo-weather1.png'),
-                require('./images/projects/weather/demo-weather1.png'),
+            ]
+        },
+        {
+            "title": "WeatherZ Landing Page",
+            "description": 'WeatherZ is a dynamic landing page showcasing the WeatherZ mobile app with animations and key highlights. It features app screenshots, benefits, and a seamless preview of its capabilities. Users can explore features and access quick download links.',
+            "category": "web",
+            "image": require('./images/projects/weather/weatherZ-landing.png'),
+            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "website": '',
+            "technologies": [
+                html5,
+                css3,
+                bootstrapIcons,
+                angular
             ]
         },       
     ],
@@ -94,7 +104,7 @@ export const projectsData = {
             "title": "Portfolio",
             "description": 'Mon portfolio est un site web avec des fonctionnalités multilingues, permettant aux visiteurs d\'explorer mes projets et d\'apprendre à me connaître dans plusieurs langues. Avec des sections personnalisables pour présenter mon travail et mon parcours, il offre une expérience sur mesure et informative.',
             "category": "web",
-            "image": require('./images/projects/weather/demo-weather1.png'),
+            "image": require('./images/projects/portfolio.png'),
             "github": 'https://github.com/CHADLIZakaria/Movie',
             "website": 'https://movie05.netlify.app/',
             "technologies": [
@@ -102,27 +112,33 @@ export const projectsData = {
                 css3,
                 js,
                 react
-            ],
-            screenshoot: [
-                require('./images/projects/weather/demo-weather1.png'),
-                require('./images/projects/weather/demo-weather1.png'),
             ]
         },
         {
-            "title": "Application mobile du météo",
-            "description": '"Weather" est une application mobile fournissant des prévisions météorologiques quotidiennes et horaires. Grâce à sa fonctionnalité de favoris, les utilisateurs peuvent enregistrer leurs emplacements préférés pour un accès rapide. L\'application fournit également des données météorologiques historiques et prend en charge plusieurs langues.',
+            "title": "WeatherZ",
+            "description": '"WeatherZ" est une application mobile fournissant des prévisions météorologiques quotidiennes et horaires. Grâce à sa fonctionnalité de favoris, les utilisateurs peuvent enregistrer leurs emplacements préférés pour un accès rapide. L\'application fournit également des données météorologiques historiques et prend en charge plusieurs langues.',
             "category": "mobile",
             "image": require('./images/projects/weather/demo-weather1.png'),
             "github": 'https://github.com/CHADLIZakaria/Movie',
-            "website": 'https://movie05.netlify.app/',
+            "website": 'https://play.google.com/store/apps/details?id=com.zchadli.weather',
             "technologies": [
                 flutter,
-            ],
-            screenshoot: [
-                require('./images/projects/weather/demo-weather1.png'),
-                require('./images/projects/weather/demo-weather1.png'),
             ]
-        },    
+        },
+        {
+            title: "WeatherZ Landing Page",
+            description: "WeatherZ is a dynamic landing page showcasing the WeatherZ mobile app with animations and key highlights. It features app screenshots, benefits, and a seamless preview of its capabilities. Users can explore features and access quick download links.",
+            category: "web",
+            image: require('./images/projects/weather/weatherZ-landing.png'),
+            github: 'https://github.com/CHADLIZakaria/Movie',
+            website: '',
+            technologies: [
+                html5,
+                css3,
+                bootstrapIcons,
+                angular
+            ]
+        },  
     ]
 }
 

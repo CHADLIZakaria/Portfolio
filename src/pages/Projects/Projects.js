@@ -1,7 +1,7 @@
 import { faCircle } from '@fortawesome/fontawesome-free-regular'
-import { faChevronCircleLeft, faChevronCircleRight, faLink } from '@fortawesome/fontawesome-free-solid'
+import { faChevronCircleLeft, faChevronCircleRight, faLink, faMobile } from '@fortawesome/fontawesome-free-solid'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faCircle as faCirlceActive } from '@fortawesome/free-solid-svg-icons'
+import { faCircle as faCirlceActive, faMobileAndroidAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { motion } from "framer-motion"
 import React, { useCallback, useEffect, useState } from 'react'
@@ -20,10 +20,12 @@ const Projects = () => {
         
     const filterProject = useCallback((category) => {
         setClassActive(category.toLowerCase());
-        if(category === 'all') 
+        if(category === 'all') {
             setProjects(projectsData[language]);
-        else
+        }
+        else {
             setProjects(projectsData[language].filter(project => project.category === category));
+        }
         setIndexProject(0);
     }, [language]);
 
@@ -86,38 +88,49 @@ const Projects = () => {
                             style={{
                                 zIndex: `${indexProject === index ? projects.length : projects.length-1 - index}`,
                                 transform: `translate3d(0px, ${index===indexProject ? 0: index <= indexProject ? (index+1)*10: (index)*10}px, 0px) rotateZ(${index===indexProject ? 0:index <= indexProject ? -1*(index+1):-1*index}deg) scale(1)`}}
-                            className='project'>
-                            <div className='project-description'>
-                                <div className='description'>
-                                    <h4 className='title'>{project.title}</h4>
-                                    <p className='description'>{project.description}</p>                                
-                                </div>                                
-                                <div className='technologies'>
-                                    <h5 className='technologies-title'>Technologies</h5>
-                                    <ul className='technologies-data'>
-                                        {project.technologies.map((technology,index) => (
-                                            <li className='technologie' key={index}>
-                                                <img src={technology.image} alt={technology.title} />
-                                                <span>{technology.title}</span>
-                                            </li>    
-                                            )
-                                        )}
-                                    </ul>
-                                    <div  className='link-project'>
-                                        <a href={project.github} target='_blank' className='link-button' rel="noreferrer">
-                                            GITHUB
-                                            <FontAwesomeIcon icon={faGithub} />
-                                        </a>
-                                        <a href={project.website} target='_blank' className='link-button' rel="noreferrer">
-                                            DEMO
-                                            <FontAwesomeIcon icon={faLink} />
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="project-image">
-                                <img src={project.image} alt={project.title} />
-                            </div>
+                                className='project'>
+                                {indexProject == index &&
+                                    <>
+                                        <div className='project-description'>
+                                            <div className='description'>
+                                                <h4 className='title'>{project.title}</h4>
+                                                <p className='description'>{project.description}</p>                                
+                                            </div>                                
+                                            <div className='technologies'>
+                                                <h5 className='technologies-title'>Technologies</h5>
+                                                <ul className='technologies-data'>
+                                                    {project.technologies.map((technology,index) => (
+                                                        <li className='technologie' key={index}>
+                                                            <img src={technology.image} alt={technology.title} />
+                                                            <span>{technology.title}</span>
+                                                        </li>    
+                                                        )
+                                                    )}
+                                                </ul>
+                                                <div  className='link-project'>
+                                                    <a href={project.github} target='_blank' className='link-button' rel="noreferrer">
+                                                        GITHUB
+                                                        <FontAwesomeIcon icon={faGithub} />
+                                                    </a>
+                                                    {project.category=='web' ? 
+                                                        <a href={project.website} target='_blank' className='link-button' rel="noreferrer">
+                                                            DEMO
+                                                            <FontAwesomeIcon icon={faLink} />
+                                                        </a>
+                                                        :
+                                                        <a href={project.website} target="_blank" className='link-button' rel="noreferrer">
+                                                            APP
+                                                            <FontAwesomeIcon icon={faMobileAndroidAlt} />
+                                                        </a>
+                                                    }
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="project-image">
+                                            <img src={project.image} alt={project.title} />
+                                        </div>
+                                    </>
+                                }
                         </div>
                     ))
                } 
