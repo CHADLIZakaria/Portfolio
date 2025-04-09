@@ -1,59 +1,87 @@
-
 const html5={
-    'title':'HTML5',
-    'image': require('./images/skills/html5.png'),
+    title:'HTML5',
+    image: require('./images/skills/html5.png'),
+    color: 'e34c26'
 }
 const css3={
-    'title':'CSS3',
-    'image': require('./images/skills/css3.png'),
+    title:'CSS3',
+    image: require('./images/skills/css3.png'),
+    color: '264de4'
 }
 const js={
-    'title':'Javascript',
-    'image':  require('./images/skills/js.png')
+    title:'Javascript',
+    image:  require('./images/skills/js.png'),
+    color: 'F0DB4F'
 }
 const react={
-    'title':'React',
-    'image': require('./images/skills/react.png'),
+    title:'React',
+    image: require('./images/skills/react.png'),
+    color: '61DBFB'
 }
 const flutter={
-    'title':'Flutter',
-    'image': require('./images/skills/flutter.png'),
+    title:'Flutter',
+    image: require('./images/skills/flutter.png'),
+    color: '40C4FF'
 }
 const bootstrap={  
-    'title':'Bootstrap5',
-    'image':  require('./images/skills/bootstrap.png')
+    title:'Bootstrap5',
+    image: require('./images/skills/bootstrap5.png'),
+    color: '563d7c',
 }
 const bootstrapIcons={  
-    'title':'Bootstrap Icons',
-    'image':  require('./images/skills/bootstrap.png')
+    title:'Bootstrap Icons',
+    image:  require('./images/skills/bootstrap5.png'),
+    color: '563d7c',
+}
+const tailwind = {
+    title: 'Tailwind',
+    image: require('./images/skills/tailwind.png'),
+    color: '06B6D4'
 }
 const java={  
-    'title': 'Java',
-    'image': require('./images/skills/java.png'),
+    title: 'Java',
+    image: require('./images/skills/java.png'),
+    color: 'f89820'
 }
 const python={  
-    'title': 'Python',
-    'image': require('./images/skills/python.png'),
-}
-const php={  
-    'title': 'PHP',
-    'image':  require('./images/skills/php.png'),
+    title: 'Python',
+    image: require('./images/skills/python.png'),
+    color: 'FFD43B'
 }
 const mysql={  
-    'title': 'MySQL',
-    'image': require('./images/skills/mysql.png'),
+    title: 'MySQL',
+    image: require('./images/skills/mysql.png'),
+    color: '00758F'
 }
 const postgresql={
-    'title': 'PostgreSQL',
-    'image': require('./images/skills/postgresql.png'),
-}
-const sqlserver={
-    'title': 'Sql Server',
-    'image':  require('./images/skills/sql-server.png'),
+    title: 'PostgreSQL',
+    image: require('./images/skills/postgresql.png'),
+    color: '336791'
 }
 const angular={
-    'title': 'Angular',
-    'image':  require('./images/skills/angular.png'),
+    title: 'Angular',
+    image:  require('./images/skills/angular.png'),
+    color: 'd4173b'
+}
+const springBoot={
+    title: 'Sprint Boot',
+    image:  require('./images/skills/spring-boot.png'),
+    color: '6DB33F'
+}
+const kafka={
+    title: 'Kafka',
+    image:  require('./images/skills/kafka.png'),
+    color: '333333'
+}
+const kubernetes={
+    title: 'Kubernetes',
+    image:  require('./images/skills/kubernetes.png'),
+    color: '3970e4'
+}
+const docker={
+    title: 'Docker',
+    image:  require('./images/skills/docker.png'),
+    color: '0db7ed'
 }
 
 
@@ -154,9 +182,9 @@ export const competances = [
             angular,
             css3,
             react,
-            js,
             flutter,
-            bootstrap
+            bootstrap,
+            tailwind
         ],
     },
     {
@@ -168,19 +196,22 @@ export const competances = [
         'values': [
             java,
             python,
-            php
+            js,
+            springBoot, 
+            kafka
         ],
     }, 
     {
         'domaine': {
-            'name': 'Database',
+            'name': 'Database & DevOps',
             'image':  require('./images/database.jpeg'),
             'className': 'database'
         },
         'values': [
            mysql,
            postgresql,
-           sqlserver
+           docker,
+           kubernetes
         ]
     }
 ]

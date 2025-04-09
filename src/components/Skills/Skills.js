@@ -28,7 +28,7 @@ const Skills = () => {
                             <ul>
                                 {competance.values.map(
                                     (element, index) => 
-                                        <li key={index}>
+                                        <li style={{'backgroundColor': '#'+element.color}} key={index}>
                                             <img src={element.image} alt={element.title} />
                                             {element.title}
                                         </li>

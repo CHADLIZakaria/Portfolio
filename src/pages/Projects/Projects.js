@@ -1,5 +1,5 @@
 import { faCircle } from '@fortawesome/fontawesome-free-regular'
-import { faChevronCircleLeft, faChevronCircleRight, faLink, faMobile } from '@fortawesome/fontawesome-free-solid'
+import { faChevronCircleLeft, faChevronCircleRight, faLink } from '@fortawesome/fontawesome-free-solid'
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faCircle as faCirlceActive, faMobileAndroidAlt } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -100,7 +100,7 @@ const Projects = () => {
                                                 <h5 className='technologies-title'>Technologies</h5>
                                                 <ul className='technologies-data'>
                                                     {project.technologies.map((technology,index) => (
-                                                        <li className='technologie' key={index}>
+                                                        <li style={{'backgroundColor': '#'+technology.color}} className='technologie' key={index}>
                                                             <img src={technology.image} alt={technology.title} />
                                                             <span>{technology.title}</span>
                                                         </li>    
