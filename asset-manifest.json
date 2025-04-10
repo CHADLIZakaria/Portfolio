@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/Portfolio/static/css/main.f62b4037.css",
-    "main.js": "/Portfolio/static/js/main.81bbdfb2.js",
+    "main.css": "/Portfolio/static/css/main.c6dc9e43.css",
+    "main.js": "/Portfolio/static/js/main.23c9c058.js",
     "static/js/787.1ed0c42c.chunk.js": "/Portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/demo-weather1.png": "/Portfolio/static/media/demo-weather1.632fa119096b28a448ef.png",
     "static/media/frontend-background.png": "/Portfolio/static/media/frontend-background.6ece0ca3d16717607015.png",
     "static/media/me.png": "/Portfolio/static/media/me.8f4bcd0f7349c9f20e34.png",
+    "static/media/weatherZ-landing.png": "/Portfolio/static/media/weatherZ-landing.7a730ef82312de527aec.png",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/CHADLIZakaria.png": "/Portfolio/static/media/CHADLIZakaria.d94f60fade55ee403d3b.png",
     "static/media/portfolio.png": "/Portfolio/static/media/portfolio.a21a3a05728f5aa45720.png",
@@ -14,28 +15,17 @@
     "static/media/fontawesome-webfont.eot": "/Portfolio/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
     "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
     "static/media/fontawesome-webfont.woff?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/angular.png": "/Portfolio/static/media/angular.01af70871edfe2e291c4.png",
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Portfolio/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "static/media/sql-server.png": "/Portfolio/static/media/sql-server.a4ba4125aadc50241c26.png",
-    "static/media/python.png": "/Portfolio/static/media/python.6a5cbc319ab3ddf8ef92.png",
-    "static/media/php.png": "/Portfolio/static/media/php.4990580e9b615aeebb1f.png",
     "static/media/en.png": "/Portfolio/static/media/en.789ff1da7dc0b7ff0220.png",
     "static/media/freeCodeCamp.jpg": "/Portfolio/static/media/freeCodeCamp.37ac74a6a5930b6f6a10.jpg",
-    "static/media/java.png": "/Portfolio/static/media/java.ddf8676bd569fe01ab44.png",
     "static/media/coursera.png": "/Portfolio/static/media/coursera.730ebfad4212ede0ba12.png",
-    "static/media/react.png": "/Portfolio/static/media/react.f3e576ba08e6be927148.png",
-    "static/media/mysql.png": "/Portfolio/static/media/mysql.7d8d571e5629923eaf74.png",
-    "static/media/postgresql.png": "/Portfolio/static/media/postgresql.6c5d698f195dac2fe5af.png",
-    "static/media/bootstrap.png": "/Portfolio/static/media/bootstrap.268c4375260420e8d982.png",
-    "static/media/css3.png": "/Portfolio/static/media/css3.4a6549b8c2b4cda8bb88.png",
-    "static/media/js.png": "/Portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "index.html": "/Portfolio/index.html",
-    "main.f62b4037.css.map": "/Portfolio/static/css/main.f62b4037.css.map",
-    "main.81bbdfb2.js.map": "/Portfolio/static/js/main.81bbdfb2.js.map",
+    "main.c6dc9e43.css.map": "/Portfolio/static/css/main.c6dc9e43.css.map",
+    "main.23c9c058.js.map": "/Portfolio/static/js/main.23c9c058.js.map",
     "787.1ed0c42c.chunk.js.map": "/Portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f62b4037.css",
-    "static/js/main.81bbdfb2.js"
+    "static/css/main.c6dc9e43.css",
+    "static/js/main.23c9c058.js"
   ]
 }
