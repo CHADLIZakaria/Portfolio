@@ -89,7 +89,7 @@ const Projects = () => {
                                 zIndex: `${indexProject === index ? projects.length : projects.length-1 - index}`,
                                 transform: `translate3d(0px, ${index===indexProject ? 0: index <= indexProject ? (index+1)*10: (index)*10}px, 0px) rotateZ(${index===indexProject ? 0:index <= indexProject ? -1*(index+1):-1*index}deg) scale(1)`}}
                                 className='project'>
-                                {indexProject == index &&
+                                {indexProject === index &&
                                     <>
                                         <div className='project-description'>
                                             <div className='description'>
@@ -97,7 +97,7 @@ const Projects = () => {
                                                 <p className='description'>{project.description}</p>                                
                                             </div>                                
                                             <div className='technologies'>
-                                                <h5 className='technologies-title'>Technologies</h5>
+                                                <h5 className='technologies-title'>Technologies:</h5>
                                                 <ul className='technologies-data'>
                                                     {project.technologies.map((technology,index) => (
                                                         <li style={{'backgroundColor': '#'+technology.color}} className='technologie' key={index}>
@@ -107,23 +107,23 @@ const Projects = () => {
                                                         )
                                                     )}
                                                 </ul>
-                                                <div  className='link-project'>
-                                                    <a href={project.github} target='_blank' className='link-button' rel="noreferrer">
-                                                        GITHUB
-                                                        <FontAwesomeIcon icon={faGithub} />
+                                            </div>
+                                            <div  className='link-project'>
+                                                <a href={project.github} target='_blank' className='link-button' rel="noreferrer">
+                                                    GITHUB
+                                                    <FontAwesomeIcon icon={faGithub} />
+                                                </a>
+                                                {project.category==='web' ? 
+                                                    <a href={project.website} target='_blank' className='link-button' rel="noreferrer">
+                                                        DEMO
+                                                        <FontAwesomeIcon icon={faLink} />
                                                     </a>
-                                                    {project.category=='web' ? 
-                                                        <a href={project.website} target='_blank' className='link-button' rel="noreferrer">
-                                                            DEMO
-                                                            <FontAwesomeIcon icon={faLink} />
-                                                        </a>
-                                                        :
-                                                        <a href={project.website} target="_blank" className='link-button' rel="noreferrer">
-                                                            APP
-                                                            <FontAwesomeIcon icon={faMobileAndroidAlt} />
-                                                        </a>
-                                                    }
-                                                </div>
+                                                    :
+                                                    <a href={project.website} target="_blank" className='link-button' rel="noreferrer">
+                                                        APP
+                                                        <FontAwesomeIcon icon={faMobileAndroidAlt} />
+                                                    </a>
+                                                }
                                             </div>
                                         </div>
                                         <div className="project-image">

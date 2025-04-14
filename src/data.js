@@ -147,7 +147,7 @@ export const projectsData = {
             "description": '"WeatherZ" est une application mobile fournissant des prévisions météorologiques quotidiennes et horaires. Grâce à sa fonctionnalité de favoris, les utilisateurs peuvent enregistrer leurs emplacements préférés pour un accès rapide. L\'application fournit également des données météorologiques historiques et prend en charge plusieurs langues.',
             "category": "mobile",
             "image": require('./images/projects/weather/demo-weather1.png'),
-            "github": 'https://github.com/CHADLIZakaria/Movie',
+            "github": 'https://github.com/CHADLIZakaria/WeatherZ',
             "website": 'https://play.google.com/store/apps/details?id=com.zchadli.weather',
             "technologies": [
                 flutter,
